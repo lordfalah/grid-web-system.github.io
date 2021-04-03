@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(223, 223, 223);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.container{
+    margin: 50px;
+    display: grid;
+}
+
+.header{
+
+    display: grid;
+    grid-template-areas: 
+                        "head head pict"
+                        "head head ture";
+    grid-template-columns: 0.7fr;
+    
+}
+
+
+.hero{
+    grid-area: head;
+    background-image: url(/img/human2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    color: white;
+    display: grid;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    padding: 50px;
+    /* box-sizing: border-box; */
+}
+
+.fiture-1{
+    grid-area: pict;
+    background-image: url(/img/kaos.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fiture-2{
+    grid-area: ture;
+    background-image: url(/img/walker.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.picture{
+    color: white;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+/* Navv bar sett */
+
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* align-items: center; */
+    order: -1;
+}
+
+.order-list{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: end;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    text-align: center;
+   
+}
+
+.order-list li a{
+    text-decoration: none;
+    display: block;
+    color: white;
+    background-color: black;
+    padding: 4px;
+    /* width: 150px; */
+}
+
+/* Navv bar sett End*/
+
+@media screen and (max-width: 1024px){
+    /* body{background-color: yellow;} */
+    .navbar{
+        display: grid;
+        row-gap: 10px;
+        grid-template-columns: 1fr;
+        /* align-items: center; */
+        order: inherit;
+    }
+
+    .brand .title{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 764px){
+
+}
+
+
+
+
+
+
+
+
+
