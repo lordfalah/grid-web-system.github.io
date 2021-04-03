@@ -26,7 +26,7 @@ body{
 
 .hero{
     grid-area: head;
-    background-image: url(/img/human2.jpg);
+    background-image: url(/nobar/img/human2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,7 +42,7 @@ body{
 
 .fiture-1{
     grid-area: pict;
-    background-image: url(/img/kaos.jpg);
+    background-image: url(/nobar/img/kaos.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -50,7 +50,7 @@ body{
 
 .fiture-2{
     grid-area: ture;
-    background-image: url(/img/walker.jpeg);
+    background-image: url(/nobar/img/walker.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,6 +63,12 @@ body{
     justify-items: center;
     align-content: center;
     align-items: center;
+}
+
+
+.container .item{
+    font-size: 35px;
+    font-weight: bold;
 }
 
 /* Navv bar sett */
@@ -97,6 +103,8 @@ body{
 
 /* Navv bar sett End*/
 
+/* Responsive break point */
+
 @media screen and (max-width: 1024px){
     /* body{background-color: yellow;} */
     .navbar{
@@ -114,10 +122,36 @@ body{
 }
 
 @media screen and (max-width: 764px){
+    /* body{background-color: yellow;} */
+    .navbar{
+        /* display: none; */
+        height: 100vh;
+        background-color: cyan;
+        align-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-720px);
+        transition: 0.80s ease-in;
+    }
+
+    .navbar.slideShow{
+        transform: translateY(0px);
+    }
+
+
+
+    .order-list{
+        margin: 35px;
+        
+    }
 
 }
 
 
+
+/* Responsive break point End*/
 
 
 
