@@ -38,7 +38,10 @@ body{
     align-content: center;
     padding: 50px;
     /* box-sizing: border-box; */
+    text-shadow: 0 0 8px rgb(50, 115, 168);
 }
+
+
 
 .fiture-1{
     grid-area: pict;
@@ -67,8 +70,8 @@ body{
 
 
 .container .item{
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 3em;
+    font-weight: bolder;
 }
 
 /* Navv bar sett */
@@ -78,7 +81,16 @@ body{
     grid-template-columns: 1fr 2fr;
     /* align-items: center; */
     order: -1;
+    /* background-color: cyan; */
+    /* justify-content: center; */
+    align-items: center;
+    align-content: center;
 }
+
+.brand .title{
+    font-size: 2.3em;
+}
+
 
 .order-list{
     list-style: none;
@@ -99,14 +111,103 @@ body{
     background-color: black;
     padding: 4px;
     /* width: 150px; */
+    transition: 0.50s ease;
 }
 
+.order-list li a:hover{
+    background-color: rgb(218, 217, 195);
+    color: black;
+    font-weight: bolder;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    box-shadow: 0 0 2px rgb(85, 85, 85);
+}
+
+
 /* Navv bar sett End*/
+
+
+/* Burger nav */
+
+.burger{
+    cursor: pointer;
+    /* margin: 6px; */
+    display: none;
+}
+
+.burger span{
+    display: block;
+    background-color: black;
+    width: 40px;
+    height: 4px;
+    border-radius: 35%;
+    margin: 4px;
+    transition: 0.50s ease;
+}
+
+.burger span:first-child{
+    transform: translateY(0px) rotate(0deg);
+    width: 25px;
+}
+
+.burger.pertama span:first-child{
+    width: 30px;
+}
+
+.burger span:nth-child(2){
+    opacity: 1;
+    transform: translateY(0px) translateX(0px);
+    width: 20px;
+}
+
+.burger.kedua span:nth-child(2){
+    width: 30px;
+}
+
+.burger span:last-child{
+    transform: translateY(0px) rotate(0deg);
+    width: 15px;
+}
+
+.burger.ketiga span:last-child{
+    width: 30px;
+}
+/* Transtition span Burger */
+
+.burger.first span:first-child{
+    background-color: white;
+    transform: translateY(10px) rotate(40deg);
+}
+
+.burger.second span:nth-child(2){
+    background-color: white;
+    transform: translateY(2px) translateX(20px);
+    opacity: 0;
+}
+
+.burger.thirth span:last-child{
+    background-color: white;
+    transform: translateY(-6px) rotate(-40deg);
+}
+
+/* Transtition span Burger End*/
+
+
+/* Burger nav End*/
+
+
+
+
 
 /* Responsive break point */
 
 @media screen and (max-width: 1024px){
     /* body{background-color: yellow;} */
+    .container .item{
+        font-size: 2.4em;
+        /* font-weight: bolder; */
+    }
+
+
     .navbar{
         display: grid;
         row-gap: 10px;
@@ -118,15 +219,21 @@ body{
     .brand .title{
         display: none;
     }
-    
+
 }
+
 
 @media screen and (max-width: 764px){
     /* body{background-color: yellow;} */
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
     .navbar{
         /* display: none; */
         height: 100vh;
-        background-color: cyan;
+        background-color: rgba(0, 0, 0, 0.7);
         align-content: center;
         position: absolute;
         top: 0;
@@ -144,8 +251,155 @@ body{
 
     .order-list{
         margin: 35px;
+        display: grid;    
+        transform: translateY(335px);
+        transition: 0.80s ease;
+        opacity: 0;
         
     }
+
+    .order-list.standing{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    .order-list li a{
+        box-shadow: 0 0 3.5px white;
+    }
+
+    .order-list li{
+        transition: 0.50s ease;
+    }
+
+    .order-list li:hover{
+        transform: scale(1.2);
+        box-shadow: 0 0 5px rgb(255, 255, 255);     
+        text-shadow: 0 0 5px rgb(187, 236, 255);
+    }
+
+
+    .order-list li .home{
+        transform: translateX(-150px) rotate(90deg);
+        opacity: 0;
+    }
+    .order-list li .Purchase, .feature{
+        transform: translate(0, -380px);
+        opacity: 0;
+    }
+    
+    
+    .order-list li .buy{
+        transform: translateX(150px) rotate(-90deg);
+        opacity: 0;
+    }
+
+    /* Effect fade order */
+    .order-list li .home.fadeOrder{
+        transform: translateX(0px) rotate(0deg);
+        opacity: 1;
+    }
+    .order-list li .Purchase.fadeOrder{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    .order-list li .feature.fadeOrder{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    .order-list li .buy.fadeOrder{
+        transform: translateX(0px) rotate(0);
+        opacity: 1;
+    }
+
+    @keyframes fadeText {
+        0%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 1;
+        }
+    }
+    /* Effect fade order */
+
+
+
+    .burger{
+        cursor: pointer;
+        /* margin: 6px; */
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 25px;
+    }
+
+
+    
+}
+
+
+@media screen and (max-width: 564px){
+    /* body{background-color: darkcyan;} */
+    body{overflow-x: hidden;}
+
+    .hero .item{
+        font-size: 2.3em;
+        margin-bottom: 8px;
+    }
+
+    .order-list{
+        /* display: none; */
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        gap: 30px;
+        justify-content: center;
+        opacity: 1;
+        transform: translateY(0px);
+        
+    }
+
+    .order-list li .home{
+        transform: translateX(-240px);
+    }
+    .order-list li .Purchase{
+        transform: translateX(240px);
+    }
+    
+    .order-list li .feature{
+        transform: translateX(-240px);
+    }
+    
+    .order-list li .buy{
+        transform: translateX(240px);
+    }
+
+    /* Effect fade order */
+    .order-list li .home.fadeOrder{
+        transform: translateX(0px);
+    }
+    .order-list li .Purchase.fadeOrder{
+        transform: translateX(0px);
+    }
+    .order-list li .feature.fadeOrder{
+        transform: translateX(0px);
+    }
+    .order-list li .buy.fadeOrder{
+        transform: translateX(0px);
+    }
+
+    /* Effect fade order */
+     
+
+    .order-list li{
+        transition: 0.50s ease;
+    }
+
+    .order-list li:hover{
+        transform: scale(1.3);
+        font-weight: bolder;
+    }
+
+
 
 }
 
