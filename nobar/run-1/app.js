@@ -12,16 +12,11 @@ function slideBurger(){
 
     // In Mouse Out
     getBurger.addEventListener("mouseout", function(){
-        console.log("dasdsad")
+        // console.log("dasdsad")
         this.classList.remove("pertama");
         this.classList.remove("kedua");
         this.classList.remove("ketiga");
     })
-
-
-
-
-
 
 
     // In Click
@@ -29,9 +24,23 @@ function slideBurger(){
         getNav.classList.toggle("slideShow");
         
         // Burger width 100%
-        // getBurger.classList.add("pertama");
-        // getBurger.classList.add("kedua");
-        // getBurger.classList.add("ketiga");
+
+
+        if(getNav.classList.contains("slideShow")){
+            getBurger.addEventListener("mouseout", function(){
+                this.classList.add("pertama");
+                this.classList.add("kedua");
+                this.classList.add("ketiga");
+                console.log("running");
+            })
+            
+        }else{
+            console.log("delete");
+            this.classList.remove("pertama");
+            this.classList.remove("kedua");
+            this.classList.remove("ketiga");
+        }
+
         // Burger width 100%
 
 
@@ -43,6 +52,8 @@ function slideBurger(){
 
         
     });
+
+
 
 };
 

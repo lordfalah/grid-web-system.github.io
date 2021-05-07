@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(92, 92, 92);
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
@@ -20,7 +20,7 @@ body{
                         "head head pict"
                         "head head ture";
     grid-template-columns: 0.7fr;
-    
+    color: white;
 }
 
 
@@ -73,6 +73,8 @@ body{
     font-size: 3em;
     font-weight: bolder;
 }
+
+
 
 /* Navv bar sett */
 
@@ -194,7 +196,111 @@ body{
 
 /* Burger nav End*/
 
+/* Content */
 
+.content{
+    background-color: rgb(48, 47, 47);
+    margin: -50px 50px 50px 50px;
+}
+
+.content .liner{
+    margin-top: -300px;
+    position: relative;
+}
+
+.liner hr {
+    margin: auto;
+    position: absolute;
+    top: 270px;
+    left: 100px;
+    right: 100px;
+    width: 400px;
+    height: 3px;
+    border-radius: 7px;
+    border: 1px solid white;
+    background-color: white;
+    opacity: 0.5;
+}
+
+
+.about-me {
+    margin-top: 100px;
+    padding-top: 250px;
+    display: grid;
+    /* justify-content: left; */
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    justify-items: center;
+    color: white;
+}
+
+.about-me .ganteng{
+    background-image: url("../img/siGanteng3.jpg");
+    background-size: cover;
+    width: 400px;
+    height: 450px;
+    margin-top: 80px;
+    /* margin-left: 10%; */
+    padding: 20px;
+    box-shadow: 7px 7px 15px 1px black;
+    /* box-sizing: border-box; */
+}
+
+.about-me .text-me{
+    display: grid;
+    margin-top: -50px;
+    grid-template-rows: 200px 5px 350px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.text-me .keahlian{
+    background-color: rgb(34, 33, 33);
+    border: 3px solid white;
+    border-radius: 5px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-top: 145px;
+}
+
+.text-me .keahlian .skill{
+    margin-bottom: 20px;
+}
+
+.keahlian .satu div{
+    border: 5px solid salmon;
+    border-radius: 5px;
+    background-color: salmon;
+}
+.keahlian .dua div{
+    border: 5px solid lightblue;
+    border-radius: 5px;
+    background-color: lightblue;
+}
+.keahlian .tiga div{
+    border: 5px solid yellow;
+    border-radius: 5px;
+    background-color: yellow;
+}
+.keahlian .empat div{
+    border: 5px solid blue;
+    border-radius: 5px;
+    background-color: blue;
+}
+
+.keahlian .lin{
+    margin: 8px;
+}
+
+/* Content End */
 
 
 
