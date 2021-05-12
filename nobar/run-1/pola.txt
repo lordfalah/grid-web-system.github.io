@@ -1,0 +1,14 @@
+1. ketika place img di click maka akan memunculkan gambar dari samping
+
+
+2. place img seolah muncul 2d
+ 
+
+
+
+
+
+
+
+
+
