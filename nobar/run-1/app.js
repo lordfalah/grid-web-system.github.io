@@ -281,14 +281,42 @@ mySkill();
 // Skill End
 
 
+const clickMore = () =>{
+    const getMore = document.querySelector(".text-more h2");
+
+    let i = 0;
+    const waktu = setInterval(() =>{
+        i++
+        if(i % 2 == 0){
+            $(getMore).css({
+                "color": `white`,
+                "transition": "0.50s"
+            })
+        
+        }else{
+            $(getMore).css({
+                "color": `salmon`,
+                "transition": "0.50s"
+            })
+        }
+
+    }, 2000);
+
+    
+}
+
+clickMore();
 // click
 const inClick = () =>{
-    const getMore = document.querySelector(".more h1");
-    const getContine = document.querySelector(".contine");
+    const getMoreText = document.querySelector(".text-more h2");
+    const getNewPlace = document.querySelector(".adding-place");
 
-    getMore.addEventListener("click", function(){
-        getContine.classList.toggle("place");
-    })
+
+    getMoreText.addEventListener("click", async function(){
+        const newPlace = await getNewPlace.classList.toggle("new-place");
+        addingNewPlace(newPlace);
+
+    });
 
 }
 
@@ -296,6 +324,78 @@ inClick();
 // click end
 
 
+// Exprience Me
+
+function addingNewPlace(boelan){
+    const getHrLine = document.querySelector(".place-my-self .all-liner .liner-one hr.line-effect");
+    const getNewPlaceParent = document.querySelector(".adding-place");
+    // console.log(getNewPlaceParent);
+
+    const lineEfect = document.querySelector(".new-place-line hr");
+    const h1Swap = document.querySelector(".place-my-self h1");
+    const h2Swap = document.querySelector(".start h2");
+
+    if(boelan === true){
+        $(window).scroll(function(){
+            const wScroll = $(this).scrollTop();
+            // console.log(wScroll);
+            if(wScroll >= $(getNewPlaceParent).offset().top - -500){
+                // console.log("keajaiban");
+                // getHrLine.classList.add("colorF")
+                getHrLine.style.animation = `colorF 5s forwards 0s`
+
+            };
+
+            if(wScroll >= $(".new-place-line").offset().top - 740){
+                lineEfect.classList.add("effect-line");
+            };
+
+            if(wScroll >= $(".place-my-self").offset().top - 715){
+                // console.log("h1 top")
+                h1Swap.classList.add("swapTop");
+            };
+
+            if(wScroll >= $(".start").offset().top - 755){
+                // console.log("Start h2");
+                h2Swap.classList.add("swapTopH2");
+            }
+
+        })
+    }
+}
+
+addingNewPlace();
+
+function redTimeRound(){
+    const getAllround = document.querySelectorAll(".round")
+
+    let count = 0;
+
+    const timmer = setInterval(() =>{
+        console.log(count++);
+
+        getAllround.forEach(round =>{
+            if(count % 2 == 0){
+                $(round).css({
+                    "transition": `0.80s ease-in-out`,
+                    "background-color": "red"
+    
+                })
+            }else{
+                $(round).css({
+                    "transition": `0.80s ease-in-out`,
+                    "background-color": "white"
+                })
+            }
+        })
+    }, 2000)
+
+
+};
+
+redTimeRound();
+
+// Exprience Me End
 
 
 function slideBurger(){
