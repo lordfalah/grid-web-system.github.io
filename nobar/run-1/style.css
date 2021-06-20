@@ -474,12 +474,10 @@ body{
     background-color: rgb(34, 33, 33);
     border: 2px solid white;
     border-radius: 5px;
-    width: 97%;
+    width: 96%;
     display: grid;
-    grid-template-columns: 1fr;
-    justify-content: start;
-    /* justify-items: center; */
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: center; */
     padding: 10px;
     box-sizing: border-box;
     transform: translateX(-1400px);
@@ -499,15 +497,17 @@ body{
 }
 
 .keahlian .passion{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(6, 1fr); */
     column-gap: 20px;
-    row-gap: 5px;
+    row-gap: 20px;
     /* justify-content: center; */
     justify-items: center;
     /* align-items: center; */
-    
+    color: white;
 }
 
 .keahlian .passion .lin{
@@ -545,120 +545,289 @@ body{
     
 }
 
-
-.keahlian .satu div{
-    border: 5px solid salmon;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.keahlian .satu div p{
+.keahlian .passion .textPassion{
+    width: 85%;
+    padding: 10px;
+    box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    justify-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    color: white;
-    font-weight: bold;
-}
-.keahlian .dua div{
-    border: 5px solid lightblue;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
 }
 
-.keahlian .dua div p{
+
+
+.keahlian .passion .textPassion p{
+    text-align: start;
+}
+
+.keahlian .passion .font-swap span{
+    display: inline-block;
+    transition: 0.30s ease;
+    cursor: pointer;
+}
+
+.keahlian .passion .font-swap{
+
+    transition: 0.80s ease-in-out;
+    /* opacity: 0; */
+
+}
+
+.keahlian .passion .font-swap.magic-font{
+
+    /* opacity: 1; */
+}
+
+@keyframes magicText {
+    0%{
+        transform: translateX(-400px);
+    }
+
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+
+
+.keahlian .passion .font-swap span:hover{
+    transform: scale(1.6);
+}
+
+.keahlian .satu .tempat1{
+    width: 350px;
+    background-color: wheat;
+}
+
+.keahlian .satu .skilHtml{
+    width: 100%;
     display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.keahlian .passion .satu div .placeWid1{
+    background-color: salmon;
+    width: 0px;
+    height: 13px;
+    transition: 0.60s ease-in-out;
+}
+
+.keahlian .passion .satu div .placeWid1.habit1{
+    width: 280px;
+}
+
+.keahlian .dua .tempat2{
+    width: 350px;
+    background-color: wheat;
+}
+
+.keahlian .dua .skilCss{
     width: 100%;
-    height: 100%;
-    color: white;
-    font-weight: bold;
-}
-
-.keahlian .tiga div{
-    border: 5px solid yellow;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.keahlian .tiga div p{
     display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    justify-content: space-between;
+}
+
+
+.keahlian .passion .dua div .placeWid2{
+    background-color: lightblue;
+    width: 0px;
+    height: 13px;
+    transition: 0.60s ease-in-out;
+}
+
+.keahlian .passion .dua div .placeWid2.habit2{
+    width: 320px;
+}
+
+
+
+.keahlian .tiga .tempat3{
+    width: 350px;
+    background-color: wheat;
+}
+
+.keahlian .tiga .skilJs{
     width: 100%;
-    height: 100%;
-    color: white;
-    font-weight: bold;
-}
-
-.keahlian .empat div{
-    border: 5px solid blue;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.keahlian .empat div p{
     display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    justify-content: space-between;
+}
+
+
+.keahlian .passion .tiga div .placeWid3{
+    background-color: yellow;
+    width: 0px;
+    height: 13px;
+    transition: 0.60s ease-in-out;
+}
+
+.keahlian .passion .tiga div .placeWid3.habit3{
+    width: 200px;
+}
+
+.keahlian .empat .tempat4{
+    width: 350px;
+    background-color: wheat;
+}
+
+.keahlian .empat .skilBs{
     width: 100%;
-    height: 100%;
-    color: white;
-    font-weight: bold;
-}
-
-
-.keahlian .lima div{
-    border: 5px solid green;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.keahlian .lima div p{
     display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    justify-content: space-between;
+}
+
+
+.keahlian .passion .empat div .placeWid4{
+    background-color: blue;
+    width: 0px;
+    height: 13px;
+    transition: 0.60s ease-in-out;
+}
+
+.keahlian .passion .empat div .placeWid4.habit4{
+    width: 160px;
+}
+
+
+.keahlian .lima .tempat5{
+    width: 350px;
+    background-color: wheat;
+}
+
+.keahlian .lima .skilNode{
     width: 100%;
-    height: 100%;
-    color: white;
-    font-weight: bold;
-}
-
-.keahlian .enam div{
-    border: 5px solid lightgreen;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.keahlian .enam div p{
     display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    justify-content: space-between;
+}
+
+
+.keahlian .passion .lima div .placeWid5{
+    background-color: green;
+    width: 0px;
+    height: 13px;
+    transition: 0.60s ease-in-out;
+}
+
+.keahlian .passion .lima div .placeWid5.habit5{
+    width: 130px;
+}
+
+.keahlian .enam .tempat6{
+    width: 350px;
+    background-color: wheat;
+}
+
+.keahlian .enam .skilPy{
     width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.keahlian .passion .enam div .placeWid6{
+    background-color: greenyellow;
+    width: 0px;
+    height: 13px;
+    transition: 0.60s ease-in-out;
+}
+
+.keahlian .passion .enam div .placeWid6.habit6{
+    width: 180px;
+}
+
+
+.passion-text{
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+.passion-text h1{
     color: white;
-    font-weight: bold;
+}
+
+.passion-text .box-col{
+    width: 100%;
+    height: 80%;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    /* gap: 20px; */
+
+}
+
+.passion-text .box-col .square-box{
+    border-radius: 10px;
+    cursor: pointer;
+    
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.passion-text .box-col .square-box.swapBottom{
+    opacity: 1;
+}
+
+.passion-text .box-col .square-box:hover{
+    box-shadow: 0 0 5px 7px rgb(92, 84, 84);
+    transform: scale(1.08);
+}
+
+@keyframes squareEffect {
+    0%{
+        opacity: 0;
+        transform: translateY(600px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.passion-text .box-col .box-1{
+    width: 170px;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.passion-text .box-col .box-2{
+    width: 170px;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.passion-text .box-col .box-3{
+    width: 170px;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.passion-text .box-col .box-4{
+    width: 170px;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 
-
-.keahlian .lin{
-    margin: 8px;
-}
 
 .my-project{
     margin: 80px 10px 0 0;
@@ -926,6 +1095,7 @@ body{
 .place-my-self{
     width: 100%;
     height: 2500px;
+    padding-bottom: 500px;
     background-color: rgba(0, 0, 0, 0.4);
     /* background-color: yellow; */
 }
@@ -975,12 +1145,21 @@ body{
     border: 1px solid white;
     background-color: white;
     border-radius: 7px;
-    width: 5px;
+    width: 5px;    
+    transform: translateY(300px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+}
+
+.place-my-self .all-liner .liner-one hr.lineMid{
+    transform: translateY(0px);
+    opacity: 1;
 }
 
 .place-my-self .all-liner .liner-one hr.line-effect{
     /* animation: colorF; */
     border: 1px solid rgb(12, 25, 202);
+
 }
 
 @keyframes colorF{
@@ -1005,7 +1184,17 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: -1445px;
+    margin-top: -1445px;       
+    transform: translateX(-700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: visible;
+}
+
+.place-my-self .all-liner .liner-one .day-one.textFirst{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .place-my-self .all-liner .liner-one .text-one{
@@ -1017,6 +1206,17 @@ body{
     align-content: center;
     margin-top: -1415px;
     width: 70%;
+    transform: translateX(700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.place-my-self .all-liner .liner-one .text-one.leftTextOne{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    
 }
 
 .all-liner .liner-one .text-one p{
@@ -1032,24 +1232,56 @@ body{
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    top: 32.5%;
+    top: 29.5%;
     left: 48.3%;
     right: 50%;
     cursor: pointer;
+    transition: 1.20s ease-in-out;
+    transform: translateY(300px);
+    opacity: 0;
+    visibility: hidden;
 }
 
-.all-liner .round-one .start{
-    margin: -200px 0 0 -13px;
+.all-liner .round-one .gambar-1{
+    /* visibility: hidden; */
+    opacity: 0;
+    position: absolute;
+    top: -100px;
+    right: 200px;
+    transition: 0.90s ease-in-out;
+    transform: translateX(-600px) rotate(180deg);
 }
 
-.all-liner .round-one .start h2{
+.all-liner .round-one .gambar-1.image1{
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);   
+}
+
+
+.all-liner .round-one .gambar-1 img{
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+
+.all-liner .round-one.bulat1{
+    transform: translateY(-60px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.all-liner .start{
+    margin: -1920px 0 0 47.2%;
+}
+
+.all-liner .start h2{
     transform: translateY(450px);
     transition: 1.20s ease-in-out;
     opacity: 0;
     visibility: hidden;
 }
 
-.all-liner .round-one .start h2.swapTopH2{
+.all-liner .start h2.swapTopH2{
     transform: translateY(0px);
     opacity: 1;
     visibility: visible;
@@ -1064,6 +1296,16 @@ body{
     align-content: center;
     margin: -2910px 0 0 30%;
     width: 70%;
+    transform: translateX(-700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .text-two.swapLeftTwo{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .liner-one .text-two p{
@@ -1073,6 +1315,16 @@ body{
 .liner-one .day-two {
     grid-area: tanggal2;
     margin-top: -1485px;
+    transform: translateX(700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .day-two.swapDayTwo{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .all-liner .round-two{
@@ -1082,10 +1334,37 @@ body{
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    top: 39.5%;
+    top: 35.6%;
     left: 48.3%;
     right: 50%;
     cursor: pointer;
+    transform: translateY(400px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.all-liner .round-two .gambar-2{
+    position: absolute;
+    top: -100px;
+    left: 200px;
+    transition: 0.90s ease-in-out;
+    transform: translateX(-600px) rotate(180deg) scale(0);
+}
+
+.all-liner .round-two .gambar-2.image2{
+    transform: translateX(0px) rotate(0deg) scale(1);
+}
+
+.all-liner .round-two .gambar-2 img{
+    border-radius: 10%;
+}
+
+.all-liner .round-two.bulat2{
+    transform: translateY(-60px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .liner-one .day-three{
@@ -1093,6 +1372,16 @@ body{
     margin-top: -1262px;
     display: flex;
     justify-content: flex-end;
+    transform: translateX(-700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .day-three.swapDayThree{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .liner-one .text-three{
@@ -1103,6 +1392,16 @@ body{
     align-content: center;
     margin-top: -2470px;
     width: 70%;
+    transform: translateX(700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .text-three.swapLeftThree{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .liner-one .text-three p{
@@ -1116,10 +1415,37 @@ body{
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    top: 46.3%;
+    top: 42%;
     left: 48.3%;
     right: 50%;
     cursor: pointer;
+    transform: translateY(300px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.all-liner .round-three .gambar-3{
+    position: absolute;
+    top: -100px;
+    right: 220px;
+    transition: 0.90s ease-in-out;
+    transform: translateX(600px) rotate(180deg) scale(0);
+}
+
+.all-liner .round-three .gambar-3.image3{
+    transform: translateX(0px) rotate(0deg) scale(1);
+}
+
+.all-liner .round-three .gambar-3 img{
+    border-radius: 15%;
+}
+
+
+.all-liner .round-three.bulat3{
+    transform: translateY(-75px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .liner-one .text-four{
@@ -1129,7 +1455,17 @@ body{
     flex-wrap: wrap;
     margin: -2035px 0 0 30%;
     justify-content: flex-end;
-    align-content: center;
+    align-content: center;  
+    transform: translateX(-700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .text-four.swapLeftFour{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .liner-one .text-four p{
@@ -1140,6 +1476,16 @@ body{
     grid-area: tanggal4;
     width: 70%;
     margin-top: -1045px;
+    transform: translateX(700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .day-four.swapDayFour{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .all-liner .round-four{
@@ -1149,10 +1495,39 @@ body{
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    top: 53%;
+    top: 48.1%;
     left: 48.3%;
     right: 50%;
     cursor: pointer;
+    transform: translateY(300px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.all-liner .round-four .gambar-4{
+    position: absolute;
+    top: -100px;
+    left: 250px;
+    transition: 0.90s ease-in-out;
+    transform: translateX(600px) rotate(180deg) scale(0);
+}
+
+.all-liner .round-four .gambar-4.image4{
+    transform: translateX(0px) rotate(0deg) scale(1);
+} 
+
+
+.all-liner .round-four .gambar-4 img{
+    border-radius: 50%;
+}
+
+
+
+.all-liner .round-four.bulat4{
+    transform: translateY(-85px);
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -1160,6 +1535,16 @@ body{
     grid-area: tanggal5;
     margin-top: -815px;
     text-align: end;
+    transform: translateX(-700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .day-five.swapDayFive{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .liner-one .text-five{
@@ -1173,6 +1558,16 @@ body{
     justify-content: flex-start;
     justify-items: flex-start;
     width: 70%;
+    transform: translateX(700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .text-five.swapRightFive{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .liner-one .text-five p {
@@ -1187,12 +1582,37 @@ body{
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    top: 60%;
+    top: 54.5%;
     left: 48.3%;
     right: 50%;
     cursor: pointer;
+    transform: translateY(300px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
+.all-liner .round-five .gambar-5{
+    position: absolute;
+    top: -100px;
+    right: 250px;
+    transition: 0.90s ease-in-out;
+    transform: translateX(600px) rotate(180deg) scale(0);
+}
+
+.all-liner .round-five .gambar-5.image5{
+    transform: translateX(0px) rotate(0deg) scale(1);
+} 
+
+.all-liner .round-five .gambar-5 img{
+    border-radius: 15%;
+}
+
+.all-liner .round-five.bulat5{
+    transform: translateY(-95px);
+    opacity: 1;
+    visibility: visible;
+}
 
 .liner-one .text-six{
     grid-area: text6;
@@ -1203,6 +1623,16 @@ body{
     align-content: center;
     margin: -1120px 0 0 30%;
     width: 70%;
+    transform: translateX(-700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .text-six.swapTextSix{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .liner-one .text-six p{
@@ -1213,6 +1643,16 @@ body{
     grid-area: tanggal6;
     margin-top: -590px;
     width: 70%;
+    transform: translateX(700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .day-six.swapDaySix{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .all-liner .round-six{
@@ -1222,10 +1662,36 @@ body{
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    top: 67%;
+    top: 60.8%;
     left: 48.3%;
     right: 50%;
     cursor: pointer;
+    transform: translateY(300px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.all-liner .round-six .gambar-6{
+    position: absolute;
+    top: -100px;
+    left: 250px;
+    transition: 0.90s ease-in-out;
+    transform: translateX(-600px) rotate(90deg) scale(0);
+}
+
+.all-liner .round-six .gambar-6.image6{
+    transform: translateX(0px) rotate(0deg) scale(1);
+}
+
+.all-liner .round-six .gambar-6 img{
+    border-radius: 15%;
+}
+
+.all-liner .round-six.bulat6{
+    transform: translateY(-105px);
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -1233,8 +1699,17 @@ body{
     grid-area: tanggal7;
     margin-top: -360px;
     text-align: end;
+    transform: translateX(-700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
+.liner-one .day-seven.swapDaySeven{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+}
 
 .liner-one .text-seven{
     grid-area: text7;
@@ -1245,6 +1720,16 @@ body{
     align-items: center;
     margin-top: -665px;
     width: 70%;
+    transform: translateX(700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .text-seven.swapTextSeven{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0px);
 }
 
 .liner-one .text-seven p{
@@ -1258,12 +1743,38 @@ body{
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    top: 74%;
+    top: 67.1%;
     left: 48.3%;
     right: 50%;
     cursor: pointer;
+    transform: translateY(300px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
+.all-liner .round-seven .gambar-7{
+    position: absolute;
+    top: -100px;
+    right: 200px;
+    transition: 0.90s ease-in-out;
+    transform: translate(600px) rotate(180deg) scale(0);
+} 
+
+.all-liner .round-seven .gambar-7.image7{
+    transform: translate(0px) rotate(0deg) scale(1);
+} 
+
+.all-liner .round-seven .gambar-7 img{
+    border-radius: 50%;
+}
+
+
+.all-liner .round-seven.bulat7{
+    transform: translateY(-115px);
+    opacity: 1;
+    visibility: visible;
+}
 
 .liner-one .text-eight{
     grid-area: text8;
@@ -1274,7 +1785,16 @@ body{
     align-content: center;
     margin: -150px 0 0 30%;
     width: 70%;
-    
+    transform: translateX(-700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .text-eight.swapTextEight{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .liner-one .text-eight p{
@@ -1285,20 +1805,67 @@ body{
     grid-area: tanggal8;
     text-align: start;
     margin-top: -100px;
+    transform: translateX(700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.liner-one .day-eight.swapDayEight{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
 }
 
 .all-liner .round-eight{
     grid-area: line8;
+    position: absolute;
+    top: 71%;
+    left: 48.3%;
+    right: 50%;
+
+}
+
+.all-liner .round-eight .round-double-eight{
+    cursor: pointer;
+    z-index: 5;
     width: 50px;
     height: 50px;
     background-color: white;
     border-radius: 50%;
+    transform: translateY(300px);
+    transition: 1.20s ease-in-out;
+    opacity: 0; 
+    visibility: hidden;  
     position: absolute;
-    top: 82%;
-    left: 48.3%;
-    right: 50%;
-    cursor: pointer;
+    top: 8px;
+}
+
+.all-liner .round-eight .round-double-eight .gambar-8{
+    position: absolute;
+    top: -100px;
+    left: 255px;
+    transition: 0.90s ease-in-out;
+    transform: translate(-600px) rotate(180deg) scale(0);
+}
+
+.all-liner .round-eight .round-double-eight .gambar-8.image8{
+    transform: translate(0px) rotate(0deg) scale(1);
+}
+
+.all-liner .round-eight .round-double-eight .gambar-8 img{
+    border-radius: 15%;
+}
+
+.all-liner .round-eight .round-double-eight.swapDouble{
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
     z-index: 5;
+}
+
+.all-liner .round-eight .right-left-line{
+    margin-top: -55px;
 }
 
 .all-liner .round-eight .garis-left{
@@ -1306,8 +1873,17 @@ body{
     height: 7px;
     background-color: white;
     transform: rotate(-45deg) translate(-220px, -50px);
-    z-index: 0;
+    z-index: 1;
     position: relative;
+    margin-top: 50px;
+    transition: 0.90s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.all-liner .round-eight .garis-left.line-1-left{
+    opacity: 1;
+    visibility: visible;
 }
 
 .all-liner .round-eight .round-left{
@@ -1317,22 +1893,59 @@ body{
     border-radius: 50%;
     position: absolute;
     top: 180px;
-    right: 165px;
+    right: 140px;
     cursor: pointer;
     z-index: 5;
+    transform: translateX(-700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
-.all-liner .round-eight .round-left .round-text-left{
+.all-liner .round-eight .round-left .gambar-9{
+    position: absolute;
+    top: 180px;
+    right: -80px;
+    transition: 1s ease-in-out;
+    transform: translateY(400px) scale(0);
+}
+
+.all-liner .round-eight .round-left .gambar-9.image9{
+    transform: translateY(0px) scale(1);
+}
+
+.all-liner .round-eight .round-left .gambar-9 img{
+    border-radius: 15%;
+}
+
+
+.all-liner .round-eight .round-left.bulat9{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.all-liner .round-eight .round-text-left{
     width: 380px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
     align-content: center;
-    margin: 80px 0 0 -350px;
+    margin: 250px 0 0 -400px;
+    transform: translateX(-700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
-.all-liner .round-eight .round-left .round-text-left p{
+.all-liner .round-eight .round-text-left.swapTextNine{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.all-liner .round-eight  .round-text-left p{
     text-align: end;
 }
 
@@ -1340,9 +1953,17 @@ body{
     width: 250px;
     height: 7px;
     background-color: white;
-    transform: rotate(45deg) translate(75px, 85px);
-    z-index: -1;
+    transform: rotate(45deg);
     position: relative;
+    margin: -195px 0 0 -10px;
+    transition: 0.90s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.all-liner .round-eight .garis-kanan.line-1-right{
+    opacity: 1;
+    visibility: visible;
 }
 
 .all-liner .round-eight .round-kanan{
@@ -1355,25 +1976,75 @@ body{
     left: 165px;
     cursor: pointer;
     z-index: 5;
+    transform: translateX(700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
-.all-liner .round-eight .round-kanan .round-text-kanan{
+.all-liner .round-eight .round-kanan .gambar-10{
+    position: absolute;
+    top: 180px;
+    left: -80px;
+    transition: 1s ease-in-out;
+    transform: translateY(400px) scale(0);
+}
+
+.all-liner .round-eight .round-kanan .gambar-10.image10{
+    transform: translateX(0px) scale(1);
+}
+
+.all-liner .round-eight .round-kanan img{
+    border-radius: 15%;
+}
+
+
+
+.all-liner .round-eight .round-kanan.bulat10{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.all-liner .round-eight .round-text-kanan{
     width: 380px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    margin: 80px 0 0 20px;
+    margin: 130px 0 0 65px;
+    transform: translateX(700px);
+    transition: 1.20s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 
-.all-liner .round-eight .round-kanan .round-text-kanan p{
+.all-liner .round-eight .round-text-kanan.swapTextTen{
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.all-liner .round-eight .round-text-kanan p{
     text-align: start;
 }
 
 /* New Inline Place 2 */
 
 
+
+footer .foot{
+    position: absolute;
+    bottom: -350px;
+    width: 100%;
+    height: 350px;
+    background-color: yellow;
+    color: white;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 /* New Place Footer */
 
 
@@ -1405,27 +2076,277 @@ body{
         display: none;
     }
 
+    /* Si Tamvan */
+
+    .about-me{
+        display: grid;
+        grid-template-areas: 
+                            "picture1 text1"
+                            "picture2 picture2";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+    }
+
+    .about-me .ganteng{
+        grid-area: picture1;
+        width: 320px;
+        height: 430px;
+    }
+
+    .about-me .text-me{
+        grid-area: text1;        
+    }
+
+    .my-project{
+        grid-area: picture2;
+        width: 40%;
+        height: 80%;
+    }
+
+    .my-project .project-photo{
+        width: 80%;
+    }
+
+    /* Si Tamvan End*/
+
+    /* Ball */
+
+    .all-liner .start{
+        text-align: center;
+        /* width: 100px; */
+        margin-left: -0.4%;
+    }
+
+    .all-liner .round{
+        margin-left: -1%;
+    }
+
+    .all-liner .round-eight{
+        margin-left: -1%;
+    }
+
+
+    .liner-one .text-eight{
+        display: flex;
+        justify-content: center;
+        margin-left: 80px;
+    }
+
+    .liner-one .text-eight p{
+        text-align: start;
+    }
+
+    /* Ball  End*/
+
+}   
+
+@media screen and (max-width: 1024px ) and (min-width: 764px){
+    /* body{background-color: aliceblue;}     */
+
+    /* Img Sizing Meme */
+    .all-liner .round-one .gambar-1{
+        position: absolute;
+        right: 160px;
+    }
+
+    .all-liner .round-one .gambar-1 img{
+        width: 230px;
+        height: 230px;
+    }
+
+    .all-liner .round-two .gambar-2{
+        position: absolute;
+        left: 160px;
+    }
+
+    .all-liner .round-two .gambar-2 img{
+        width: 230px;
+        height: 230px;
+    }
+
+    .all-liner .round-three .gambar-3{
+        position: absolute;
+        right: 160px;
+    }
+
+    .all-liner .round-three .gambar-3 img{
+        width: 230px;
+        height: 230px;
+    }
+
+    .all-liner .round-four .gambar-4{
+        position: absolute;
+        left: 160px;
+    }
+
+    .all-liner .round-four .gambar-4 img{
+        width: 230px;
+        height: 230px;
+    }
+
+    .all-liner .round-five .gambar-5{
+        position: absolute;
+        right: 160px;
+    }
+
+    .all-liner .round-five .gambar-5 img{
+        width: 230px;
+        height: 230px;
+    }
+
+    .all-liner .round-six .gambar-6{
+        position: absolute;
+        left: 160px;
+    }
+
+    .all-liner .round-six .gambar-6 img {
+        width: 230px;
+        height: 230px;
+    }
+
+    
+    .all-liner .round-seven .gambar-7{
+        position: absolute;
+        right: 160px;
+    }
+
+    .all-liner .round-seven .gambar-7 img{
+        width: 230px;
+        height: 230px;
+    }
+
+    .all-liner .round-eight .round-double-eight .gambar-8{
+        position: absolute;
+        top: -130px;
+        left: 160px;
+    }
+
+    .all-liner .round-eight .round-double-eight .gambar-8 img {
+        width: 230px;
+        height: 230px;
+    }
+
+
+
+
+    /* Img Sizing Meme End*/
+
+
+    /* Day */
+    
+    .liner-one .day-one{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .liner-one .day-two{
+        width: 100%;
+    }
+
+    .liner-one .day-two h3{
+        margin-top: -15px;
+    }
+
+    .liner-one .day-three{
+        width: 100%;
+    }
+
+    .liner-one .day-three h3{
+        width: 20%;
+        margin-top: -18px;
+        text-align: center;
+    }
+
+    .liner-one .day-four{
+        width: 100%;
+        /* margin-bottom: 10px; */
+    }
+
+    .liner-one .day-four h3{
+        width: 20%;
+        text-align: center;
+        margin-top: -15px;
+    }
+
+    .liner-one .day-five{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .liner-one .day-five h3{
+        width: 20%;
+        text-align: center;
+        margin-top: -13px;
+    }
+
+    .liner-one .day-six{
+        width: 100%;
+    }
+
+    .liner-one .day-six h3{
+        width: 25%;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .liner-one .day-seven h3{
+        margin-top: -10px;
+    }
+
+    .liner-one .day-eight h3{
+        width: 26%;
+        text-align: center;
+        margin-top: -5px;
+    }
+
+    .all-liner .round-eight .round-kanan{
+        position: absolute;
+        top: 182px;
+    }
+
+    .all-liner .round-eight .round-text-left p{
+        width: 80%;
+    }
+
+    .all-liner .round-eight .round-text-kanan h4{
+        margin-top: -20px;
+    }
+
+    .all-liner .round-eight .round-text-kanan p{
+
+        width: 80%;
+        /* margin-top: -20px; */
+    }
+
+    /* Day End*/
 }
 
 
 @media screen and (max-width: 764px){
     /* body{background-color: yellow;} */
     body{
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
+        overflow-y: visible;
+    }
+
+    body.scrollHidden{
         overflow-y: hidden;
     }
 
     .navbar{
         /* display: none; */
-        height: 100vh;
+        height: 110vh;
         background-color: rgba(0, 0, 0, 0.7);
         align-content: center;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        transform: translateY(-720px);
+        transform: translateY(-800px);
         transition: 0.80s ease-in;
+        z-index: 5;
     }
 
     .navbar.slideShow{
@@ -1439,7 +2360,7 @@ body{
         display: grid;    
         transform: translateY(335px);
         transition: 0.80s ease;
-        opacity: 0;
+        opacity: 1;
         
     }
 
@@ -1516,10 +2437,238 @@ body{
         position: absolute;
         top: 10px;
         right: 25px;
+        z-index: 6;
+    }
+
+    .about-me{
+        display: grid;
+        grid-template-areas: 
+                            "photo1 photo2"
+                            "photo3 photo3";
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-me .ganteng{
+        grid-area: photo1;
+        width: 250px;
+        height: 320px;
+    }
+    
+    .about-me .text-me{
+        grid-area: photo2;
+        padding: 15px;
+    }
+
+    .text-me .logo .here .follow{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 3px;
     }
 
 
-    
+    .my-project{
+        grid-area: photo3;
+        width: 55%;
+        height: 80%;
+    }
+
+    /* Image Meme */
+
+    .all-liner .round-one .gambar-1{
+        position: absolute;
+        right: 60px;
+    }
+
+    .all-liner .round-one .gambar-1 img{
+        width: 210px;
+        height: 180px;
+    }
+
+    .all-liner .round-two .gambar-2{
+        position: absolute;
+        left: 60px;
+    }
+
+    .all-liner .round-two .gambar-2 img{
+        width: 210px;
+        height: 180px;
+    }
+
+
+    .all-liner .round-three .gambar-3{
+        position: absolute;
+        right: 60px;
+    }
+
+    .all-liner .round-three .gambar-3 img{
+        width: 210px;
+        height: 180px;
+    }
+
+    .all-liner .round-four .gambar-4{
+        position: absolute;
+        left: 60px;
+    }
+
+    .all-liner .round-four .gambar-4 img{
+        width: 210px;
+        height: 180px;
+    }
+
+
+    .all-liner .round-five .gambar-5{
+        position: absolute;
+        right: 60px;
+    }
+
+    .all-liner .round-five .gambar-5 img{
+        width: 210px;
+        height: 180px;
+    }
+
+    .all-liner .round-six .gambar-6{
+        position: absolute;
+        left: 60px;
+    }
+
+    .all-liner .round-six .gambar-6 img{
+        width: 210px;
+        height: 180px;
+    }
+
+
+    .all-liner .round-seven .gambar-7{
+        position: absolute;
+        right: 60px;
+    }
+
+    .all-liner .round-seven .gambar-7 img{
+        width: 210px;
+        height: 180px;
+    }
+
+
+    .all-liner .round-eight .round-double-eight .gambar-8{
+        position: absolute;
+        left: 60px;
+    }
+
+    .all-liner .round-eight .round-double-eight .gambar-8 img{
+        width: 210px;
+        height: 180px;
+    }
+
+    /* Image Meme End*/
+
+
+    /* Bola naga */
+
+    .all-liner .round{
+        margin-left: -2.4%;
+    }
+
+    .all-liner .round-eight{
+        margin-left: -1%;
+    }
+
+    .all-liner .round-eight{
+        margin-left: -2.1%;
+    }
+
+    /* Bola naga End*/
+
+
+    /* Text  */
+
+    .place-my-self .all-liner .liner-one .text-one{
+        margin-top: -1520px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .liner-one .text-two{
+        margin-top: -3050px;
+        font-size: 15px;
+        margin-left: 65px;
+    }
+
+    .liner-one .text-three{
+        margin-top: -2580px;
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    .liner-one .text-four{
+        margin-top: -2150px;
+        font-size: 15px;
+        margin-left: 65px;
+    }
+
+    .liner-one .text-five{
+        margin-top: -1665px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .liner-one .text-six{
+        margin-top: -1210px;
+        font-size: 15px;
+        margin-left: 65px;
+    }
+
+    .liner-one .text-seven{
+        margin-top: -750px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .liner-one .text-eight{
+        margin-top: -200px;
+        font-size: 15px;
+        margin-left: 65px;
+    }
+
+    /* Text  End*/
+
+
+    /* Days */
+
+    .place-my-self .all-liner .liner-one .day-one{
+        margin-top: -1400px;
+    }
+
+    .liner-one .day-two{
+        margin-top: -1450px;
+    }
+
+    .liner-one .day-three{
+        margin-top: -1218px;
+    }
+
+    .liner-one .day-four{
+        margin-top: -1000px;
+    }
+
+    .liner-one .day-five{
+        margin-top: -765px;
+    }
+
+    .liner-one .day-six{
+        margin-top: -535px;
+    }
+
+    .liner-one .day-seven{
+        margin-top: -310px;
+    }
+
+
+    /* Days End*/
+
+
 }
 
 

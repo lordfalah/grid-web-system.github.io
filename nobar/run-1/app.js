@@ -133,7 +133,7 @@ const effectPhoto = () =>{
 
             if(getSecondPhoto.classList.contains("second-border")){
                 $(".second-border").css({
-                    "transform": `translate(0, ${wScroll / -22}%)`,
+                    "transform": `translate(0, ${wScroll / -35}%)`,
                     "margin-top": `25px`
                 })
             }
@@ -216,6 +216,7 @@ const mySkill = () => {
     const getKeahlian = document.querySelector(".keahlian");
     const getTextSkill = document.querySelector(".skill");
 
+
     $(window).scroll(function(){
         const wScroll = $(this).scrollTop();
 
@@ -223,7 +224,14 @@ const mySkill = () => {
             // console.log("skill");
 
             getKeahlian.classList.add("edit");
-            getTextSkill.classList.add("textSkill")
+            getTextSkill.classList.add("textSkill");
+            const getHabit1 = document.querySelector(".placeWid1");
+            const getHabit2 = document.querySelector(".placeWid2");
+            const getHabit3 = document.querySelector(".placeWid3");
+            const getHabit4 = document.querySelector(".placeWid4");
+            const getHabit5 = document.querySelector(".placeWid5");
+            const getHabit6 = document.querySelector(".placeWid6");
+            // console.log(getHabit3)
 
             if(getKeahlian.classList.contains("edit")){
                 setTimeout(() =>{
@@ -244,14 +252,62 @@ const mySkill = () => {
                     // console.log("ada oval");
                     setTimeout(() =>{
                         $(".absord").css({
-                            "transform": `translate(0, ${wScroll / -25}%)`,
-                            "transition": `0.80s ease`
-                        })
-                    }, 500)
+                            "transform": `translate(0, ${wScroll / -38}%)`,
+                            "transition": `0.80s ease`,
+                            "margin-top": `200px`
+                        });
 
+                        getHabit1.classList.add("habit1");
+                        getHabit2.classList.add("habit2");
+                        getHabit3.classList.add("habit3");
+                        getHabit4.classList.add("habit4");
+                        getHabit5.classList.add("habit5");
+                        getHabit6.classList.add("habit6");
+                        
+                    }, 850)
 
+                    const skilling = document.querySelectorAll(".font-swap");
+
+                    skillFont(skilling);
                 }
+
+
+                // Text font Effect
+
+                    const skilling = document.querySelectorAll(".font-swap");
+
+
+                    skilling.forEach(text =>{
+                        const font = [...text.textContent]
+                                    .map(rex => {
+                                        return `<span>${rex}</span>`
+                                    }).join("")
+                
+                    text.innerHTML = font;
+                    // console.log(font)
+                    })
+
+
+
+                    // Text font Effect End
+
             });
+
+
+
+            // Box square Box
+
+            const getSquare = document.querySelectorAll(".square-box");
+
+            getSquare.forEach((square, i) =>{
+                setTimeout(() =>{
+                    square.classList.add("swapBottom");
+                }, 800)
+
+                square.style.animation = `squareEffect 1s ease-in ${i / 5 + 0.2}s`;
+            });
+            
+            // Box square Box End
 
         }else{
             // console.log('akan dihapus');
@@ -278,6 +334,24 @@ const mySkill = () => {
 };
 
 mySkill();
+
+// skilling
+
+function skillFont(skilling){
+    skilling.forEach((font, i) =>{
+        // console.log(font);
+        setTimeout(() =>{
+            font.classList.add("magic-font");
+        }, 200)
+
+        font.style.animation = `magicText 1s ease-in ${i / 5}s`
+
+    })
+}
+
+// skilling End
+
+
 // Skill End
 
 
@@ -305,6 +379,99 @@ const clickMore = () =>{
     
 }
 
+// Bola round
+
+
+const clickingRound = () =>{
+    // Select Round Img
+    const round = document.querySelectorAll(".round");
+    
+    const getImg1 = document.querySelector(".gambar-1");
+    const getImg2 = document.querySelector(".gambar-2");
+    const getImg3 = document.querySelector(".gambar-3");
+    const getImg4 = document.querySelector(".gambar-4");
+    const getImg5 = document.querySelector(".gambar-5");
+    const getImg6 = document.querySelector(".gambar-6");
+    const getImg7 = document.querySelector(".gambar-7");
+    const getImg8 = document.querySelector(".gambar-8");
+    const getImg9 = document.querySelector(".gambar-9");
+    const getImg10 = document.querySelector(".gambar-10");
+    // Select Round Img End
+    
+    round.forEach((ron, i) =>{
+        ron.addEventListener("click", function(e){
+            if(e.target.classList[1] == "round-one"){
+                console.log("test1");
+
+                getImg1.classList.add("image1");
+
+            }
+
+            if(e.target.classList[1] == "round-two"){
+                console.log("test");
+
+                getImg2.classList.add("image2");
+
+            }
+
+            if(e.target.classList[1] == "round-three"){
+                console.log("test");
+
+                getImg3.classList.add("image3");
+
+            }
+
+            if(e.target.classList[1] == "round-four"){
+                console.log("test");
+
+                getImg4.classList.add("image4");
+            }
+
+            if(e.target.classList[1] == "round-five"){
+                console.log("test");
+
+                getImg5.classList.add("image5");
+            }
+
+            if(e.target.classList[1] == "round-six"){
+                console.log("test");
+
+                getImg6.classList.add("image6");
+            }
+
+            if(e.target.classList[1] == "round-seven"){
+                console.log("test");
+
+                getImg7.classList.add("image7");
+            }
+
+            if(e.target.classList[1] == "round-double-eight"){
+                console.log("888");
+
+                getImg8.classList.add("image8");
+            }
+
+            if(e.target.classList[1] == "round-left"){
+                console.log("999");
+
+                getImg9.classList.add("image9");
+
+            }
+
+            if(e.target.classList[1] == "round-kanan"){
+                getImg10.classList.add("image10");
+
+                console.log("10")
+            }
+            
+        })
+    })
+}
+
+clickingRound();
+
+// Bola round End
+
 clickMore();
 // click
 const inClick = () =>{
@@ -331,9 +498,51 @@ function addingNewPlace(boelan){
     const getNewPlaceParent = document.querySelector(".adding-place");
     // console.log(getNewPlaceParent);
 
+    const lineMid = document.querySelector(".place-my-self .all-liner .liner-one hr");
+
     const lineEfect = document.querySelector(".new-place-line hr");
     const h1Swap = document.querySelector(".place-my-self h1");
     const h2Swap = document.querySelector(".start h2");
+    const dayOne = document.querySelector(".liner-one .day-one");
+    const textOne = document.querySelector(".liner-one .text-one");
+    const dayTwo = document.querySelector(".day-two");
+    const swapLeftTwo = document.querySelector(".all-liner .text-two");
+    const dayThree = document.querySelector(".liner-one .day-three");
+    const swapLeftThree = document.querySelector(".liner-one .text-three");
+    const swapLeftFour = document.querySelector(".liner-one .text-four");
+    const swapDayFour = document.querySelector(".liner-one .day-four");
+    const swapDayFive = document.querySelector(".liner-one .day-five");
+    const swapRightFive = document.querySelector(".liner-one .text-five");
+    const swapTextSix = document.querySelector(".liner-one .text-six");
+    const swapDaySix = document.querySelector(".liner-one .day-six");
+    const swapDaySeven = document.querySelector(".liner-one .day-seven");
+    const swapTextSeven = document.querySelector(".liner-one .text-seven");
+    const swapTextEight = document.querySelector(".liner-one .text-eight");
+    const swapDayEight = document.querySelector(".liner-one .day-eight");
+
+    // Oval Parent
+    const roundOne = document.querySelector(".round-one");
+    const roundTwo = document.querySelector(".round-two");
+    const roundThree = document.querySelector(".round-three");
+    const roundFour = document.querySelector(".round-four");
+    const roundFive = document.querySelector(".round-five");
+    const roundSix = document.querySelector(".round-six");
+    const roundSeven = document.querySelector(".round-seven");
+    const swapDouble = document.querySelector(".all-liner .round-eight .round-double-eight");
+    const roundNine = document.querySelector(".round-eight .right-left-line .round-left");
+    const roundTen = document.querySelector(".round-eight .right-left-line .round-kanan");
+    // Oval Parent End
+
+    // Line Effect
+
+    const lineLeft = document.querySelector(".all-liner .round-eight .garis-left");
+    const lineRight = document.querySelector(".all-liner .round-eight .garis-kanan");
+
+
+    const textLeft = document.querySelector(".all-liner .round-eight .round-text-left");
+    const textRight = document.querySelector(".all-liner .round-eight .round-text-kanan");
+    // Line Effect END
+
 
     if(boelan === true){
         $(window).scroll(function(){
@@ -342,7 +551,7 @@ function addingNewPlace(boelan){
             if(wScroll >= $(getNewPlaceParent).offset().top - -500){
                 // console.log("keajaiban");
                 // getHrLine.classList.add("colorF")
-                getHrLine.style.animation = `colorF 5s forwards 0s`
+                getHrLine.style.animation = `colorF 5s forwards 0s`;
 
             };
 
@@ -358,8 +567,162 @@ function addingNewPlace(boelan){
             if(wScroll >= $(".start").offset().top - 755){
                 // console.log("Start h2");
                 h2Swap.classList.add("swapTopH2");
+            };
+
+            if(wScroll >= $(dayOne).offset().top - -990){
+                // console.log("text1")
+                dayOne.classList.add("textFirst")
             }
 
+            if(wScroll >= $(textOne).offset().top - -980){
+                // console.log("TextOne");
+                textOne.classList.add("leftTextOne");
+            }
+
+            if(wScroll >= $(dayTwo).offset().top - 650){
+                // console.log("DayTwo");
+                dayTwo.classList.add("swapDayTwo");
+            }
+
+            if(wScroll >= $(swapLeftTwo).offset().top - -780){
+                // console.log("swapDay");
+                swapLeftTwo.classList.add("swapLeftTwo");
+            };
+
+            if(wScroll >= $(dayThree).offset().top - 630){
+                // console.log("Day Three");
+                dayThree.classList.add("swapDayThree");
+            }
+
+            if(wScroll >= $(swapLeftThree).offset().top - -560){
+                // console.log("textThree");
+                swapLeftThree.classList.add("swapLeftThree");
+            }
+
+            if(wScroll >= $(swapLeftFour).offset().top - -330){
+                // console.log("textFour");
+                swapLeftFour.classList.add("swapLeftFour");
+            }
+
+            if(wScroll >= $(swapDayFour).offset().top - 650){
+                // console.log("dayFour");
+                swapDayFour.classList.add("swapDayFour")
+            }
+
+            if(wScroll >= $(swapDayFive).offset().top - 600){
+                // console.log("Day Five");
+                swapDayFive.classList.add("swapDayFive");
+            }
+
+            if(wScroll >= $(swapRightFive).offset().top - -150){
+                // console.log("Text Five");
+                swapRightFive.classList.add("swapRightFive");
+            }
+
+            if(wScroll >= $(swapTextSix).offset().top - 90){
+                // console.log("textSix");
+                swapTextSix.classList.add("swapTextSix");
+            }
+
+            if(wScroll >= $(swapDaySix).offset().top - 620){
+                // console.log("DaySIx");
+                swapDaySix.classList.add("swapDaySix");
+            }
+
+            if(wScroll >= $(swapDaySeven).offset().top - 650){
+                // console.log("DaySeven");
+                swapDaySeven.classList.add("swapDaySeven");
+            }
+
+            if(wScroll >= $(swapTextSeven).offset().top - 340){
+                // console.log("TextSeven");
+                swapTextSeven.classList.add("swapTextSeven")
+            }
+
+            if(wScroll >= $(swapTextEight).offset().top - 560){
+                // console.log("TextEight");
+                swapTextEight.classList.add("swapTextEight");
+            }
+
+            if(wScroll >= $(swapDayEight).offset().top - 610){
+                // console.log("DayEight");
+                swapDayEight.classList.add("swapDayEight");
+            }
+
+            // Rounded Oval
+            if(wScroll >= $(roundOne).offset().top - 1010){
+                roundOne.classList.add("bulat1");
+                // console.log("BUlat1");
+            };
+
+            if(wScroll >= $(roundTwo).offset().top - 1020){
+                // console.log("BUlat2");
+                roundTwo.classList.add("bulat2");
+            }
+
+            if(wScroll >= $(roundThree).offset().top - 900){
+                // console.log("Round Three");
+                roundThree.classList.add("bulat3");
+            }
+
+            if(wScroll >= $(roundFour).offset().top - 925){
+                // console.log("Round Four");
+                roundFour.classList.add("bulat4");
+            }
+
+            if(wScroll >= $(roundFive).offset().top - 900){
+                // console.log("Five");
+                roundFive.classList.add("bulat5");
+            }
+
+            if(wScroll >= $(roundSix).offset().top - 920){
+                // console.log("BUlat6");
+                roundSix.classList.add("bulat6");
+            }
+
+            if(wScroll >= $(roundSeven).offset().top - 930){
+                // console.log("Bulat7");
+                roundSeven.classList.add("bulat7");
+            }
+
+            if(wScroll >= $(swapDouble).offset().top - 950){
+                // console.log("DOuble");
+                swapDouble.classList.add("swapDouble")
+            }
+
+            if(wScroll >= $(roundNine).offset().top - 660){
+                // console.log("Nine");
+                roundNine.classList.add("bulat9")
+            }
+
+            if(wScroll >= $(roundTen).offset().top - 660){
+                // console.log("TEn");
+                roundTen.classList.add("bulat10")
+            }
+
+            if(roundTen.classList.contains("bulat10")){
+                // console.log("Ada nie");
+                setTimeout(() =>{
+                    lineLeft.classList.add("line-1-left");
+                    lineRight.classList.add("line-1-right");
+                }, 800);
+            };
+
+            if(wScroll >= $(textLeft).offset().top - 660){
+                // console.log("TextLeft");
+                textLeft.classList.add("swapTextNine");
+            }
+
+            if(wScroll >= $(textRight).offset().top - 660){
+                textRight.classList.add("swapTextTen")
+            }
+
+            if(wScroll >= $(lineMid).offset().top - 1000){
+                // console.log("MIDDD");
+                lineMid.classList.add("lineMid");
+            }
+
+            // Rounded Oval End
         })
     }
 }
@@ -372,7 +735,7 @@ function redTimeRound(){
     let count = 0;
 
     const timmer = setInterval(() =>{
-        console.log(count++);
+        count++;
 
         getAllround.forEach(round =>{
             if(count % 2 == 0){
@@ -401,6 +764,7 @@ redTimeRound();
 function slideBurger(){
     const getBurger = document.querySelector(".burger");
     const getNav = document.querySelector(".navbar");
+    const getBody = document.querySelector("body");
 
     // In Mouse Over
     getBurger.addEventListener("mouseover", function(){
@@ -421,7 +785,10 @@ function slideBurger(){
     // In Click
     getBurger.addEventListener("click", function(){
         getNav.classList.toggle("slideShow");
-        
+        // console.log("hayuk")
+        getBody.classList.toggle("scrollHidden");
+
+
         // Burger width 100%
 
 
