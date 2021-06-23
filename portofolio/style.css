@@ -28,7 +28,7 @@ body{
 
 .hero{
     grid-area: head;
-    background-image: url(/nobar/img/human2.jpg);
+    background-image: url(../nobar/img/human2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,7 +47,7 @@ body{
 
 .fiture-1{
     grid-area: pict;
-    background-image: url(/nobar/img/kaos.jpg);
+    background-image: url(../nobar/img/kaos.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,7 +55,7 @@ body{
 
 .fiture-2{
     grid-area: ture;
-    background-image: url(/nobar/img/walker.jpeg);
+    background-image: url(../nobar/img/walker.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -206,16 +206,15 @@ body{
 }
 
 .content .liner{
-    margin-top: -300px;
+    margin-bottom: -300px;
+    margin-top: 50px;
     position: relative;
+    top: 50px;
 }
 
 .liner hr {
     margin: auto;
-    position: absolute;
-    top: 340px;
-    left: 100px;
-    right: 100px;
+    /* margin-bottom:  -100px; */
     width: 400px;
     height: 3px;
     border-radius: 7px;
@@ -228,22 +227,22 @@ body{
 .about-me {
     margin-top: 50px;
     padding-top: 350px;
+    width: 100%;
     display: grid;
     /* justify-content: left; */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
     justify-content: center;
     justify-items: center;
     color: white;
-
 }
 
 .about-me .ganteng{
-    background-image: url("../img/siGanteng3.jpg");
+    background-image: url(../nobar/img/siGanteng3.jpg);
     border-radius: 15% 0 0 0;
     background-size: cover;
-    width: 380px;
-    height: 500px;
+    width: 350px;
+    height: 480px;
     margin-top: 80px;
     /* margin-left: 10%; */
     padding: 20px;
@@ -252,6 +251,8 @@ body{
     transition: 1s ease-in-out;
     opacity: 0.1;
     position: relative;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
 }
 
 .about-me .ganteng.tampan{
@@ -867,7 +868,7 @@ body{
     opacity: 1;
     z-index: 1;
     box-shadow: 0px 0px 10px 2px rgb(32, 31, 31);
-    background-image: url("../img/mrSaloy-2.jpg");
+    background-image: url(../nobar/img/mrSaloy-2.jpg);
 }
 
 
@@ -941,6 +942,11 @@ body{
 
 /* New Place Footer */
 
+footer{
+    display: none;
+}
+
+
 .adding-place{
     margin: 50px;
     transform: translateY(-380px);
@@ -948,6 +954,7 @@ body{
     z-index: -1;
     opacity: 0;
     visibility: hidden;
+    /* display: block; */
 }
 
 .adding-place.new-place{
@@ -956,6 +963,7 @@ body{
     opacity: 1;
     visibility: visible;
     color: white;
+    display: block;
 }
 
 .adding-place.new-place .place{
@@ -1222,6 +1230,7 @@ body{
 .all-liner .liner-one .text-one p{
     text-align: start;
 }
+
 
 
 
@@ -2110,6 +2119,18 @@ footer .foot{
 
     /* Si Tamvan End*/
 
+    /* Box */
+
+    .passion-text .box-col{
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+
+
+    /* Box End*/
+
+
     /* Ball */
 
     .all-liner .start{
@@ -2143,6 +2164,27 @@ footer .foot{
 
 @media screen and (max-width: 1024px ) and (min-width: 764px){
     /* body{background-color: aliceblue;}     */
+
+
+    /* SI handsome */
+
+    .my-project .project-photo.second-border{
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* SI handsome End*/
+
+
+    /* Box Sizing */
+
+    .passion-text .box-col{
+        row-gap: 15px;
+    }
+
+    /* Box Sizing End*/
+
+
 
     /* Img Sizing Meme */
     .all-liner .round-one .gambar-1{
@@ -2326,6 +2368,11 @@ footer .foot{
 
 @media screen and (max-width: 764px){
     /* body{background-color: yellow;} */
+
+    /* footer{
+        display: none;
+    } */
+
     body{
         /* overflow-x: hidden; */
         overflow-y: visible;
@@ -2445,20 +2492,32 @@ footer .foot{
         grid-template-areas: 
                             "photo1 photo2"
                             "photo3 photo3";
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
         justify-content: center;
         align-items: center;
     }
 
     .about-me .ganteng{
         grid-area: photo1;
-        width: 250px;
-        height: 320px;
+        max-width: 80%;
+        height: 50%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .about-me .ganteng .introduce{
+        width: 80%;
+        height: 20%;
     }
     
     .about-me .text-me{
         grid-area: photo2;
         padding: 15px;
+    }
+
+    .text-me .logo{
+        /* margin-top: 100px; */
+        row-gap: 10px;
     }
 
     .text-me .logo .here .follow{
@@ -2467,87 +2526,238 @@ footer .foot{
         justify-content: center;
         align-items: center;
         padding: 3px;
+        margin-top: 20px;
+        /* margin-bottom: 20px; */
     }
 
 
     .my-project{
         grid-area: photo3;
-        width: 55%;
+        width: 65%;
         height: 80%;
+        display: grid;
+        grid-template-rows: 0.95fr;
+        /* background-size: cover; */
     }
+
+    .my-project .project-photo.second-border{
+        background-size: cover;
+        width: 80%;
+        height: 100%;
+        background-position-x: center;
+    }
+
+
+
+
+    /* passion Box */
+
+    .keahlian .passion{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* grid-template-rows: repeat(auto-fit, minmax(50px, 1fr)); */
+    }
+
+    /* .keahlian .passion .lin{
+        width: 50%;
+    } */
+
+    .keahlian .satu .tempat1{
+        width: 100%;
+    }
+
+    .keahlian .passion .satu div .placeWid1.habit1{
+        width: 80%;
+    }
+
+    .keahlian .dua .tempat2{
+        width: 100%;
+    }
+
+    .keahlian .passion .dua div .placeWid2.habit2{
+        width: 85%;
+    }
+
+    .keahlian .tiga .tempat3{
+        width: 100%;
+    }
+
+    .keahlian .passion .tiga div .placeWid3.habit3{
+        width: 60%;
+    }
+
+    .keahlian .empat .tempat4{
+        width: 100%;
+    }
+
+    .keahlian .passion .empat div .placeWid4.habit4{
+        width: 40%;
+    }
+
+    .keahlian .lima .tempat5{
+        width: 100%;
+    }
+
+    .keahlian .passion .lima div .placeWid5.habit5{
+        width: 30%;
+    }
+
+    .keahlian .enam .tempat6{
+        width: 100%;
+    }
+
+    .keahlian .passion .enam div .placeWid6.habit6{
+        width: 50%;
+    }
+
+
+    .passion-text{
+        display: grid;
+        /* flex-direction: row; */
+        flex-wrap: nowrap;
+        grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+    }
+
+    .passion-text .box-col{
+        row-gap: 20px;
+        /* width: 50%; */
+    }
+
+    .passion-text .box-col .square-box{
+        width: 65%;
+    }
+
+    .keahlian .passion .lin{
+        width: 90%;
+    }
+
+    /* passion Box End*/
+
+    /* Box Long */
+
+    .place .box-long{
+        display: grid;
+        column-gap: 15px;
+        row-gap: 15px;
+        padding: 10px;
+        box-sizing: border-box;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-areas: 
+                            "divice1 divice2"
+                            "divice0 divice0";
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+    }
+
+    .box-long .brand-design{
+        grid-area: divice1;
+    }
+
+    .box-long .web-design{
+        grid-area: divice2;
+    }
+
+    .box-long .app-design{
+        grid-area: divice0;
+    }
+
+    .app-design .text-app{
+        margin-top: -30px;
+    }
+
+    /* Box Long End*/
+
+
 
     /* Image Meme */
 
     .all-liner .round-one .gambar-1{
+        top: -125px;
         position: absolute;
         right: 60px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .all-liner .round-one .gambar-1 img{
-        width: 210px;
+        width: 180px;
         height: 180px;
     }
 
     .all-liner .round-two .gambar-2{
         position: absolute;
+        margin-top: -10px;
+        top: -125px;
         left: 60px;
     }
 
     .all-liner .round-two .gambar-2 img{
-        width: 210px;
+        width: 180px;
         height: 180px;
     }
 
 
     .all-liner .round-three .gambar-3{
         position: absolute;
+        top: -125px;
         right: 60px;
+        margin-top: -10px;
     }
 
     .all-liner .round-three .gambar-3 img{
-        width: 210px;
+        width: 180px;
         height: 180px;
     }
 
     .all-liner .round-four .gambar-4{
         position: absolute;
+        top: -125px;
         left: 60px;
+        margin-top: -25px;
     }
 
     .all-liner .round-four .gambar-4 img{
-        width: 210px;
+        width: 180px;
         height: 180px;
     }
 
 
     .all-liner .round-five .gambar-5{
         position: absolute;
+        top: -125px;
         right: 60px;
+        margin-top: -30px;
     }
 
     .all-liner .round-five .gambar-5 img{
-        width: 210px;
+        width: 180px;
         height: 180px;
     }
 
     .all-liner .round-six .gambar-6{
         position: absolute;
+        top: -125px;
         left: 60px;
+        margin-top: -40px;
     }
 
     .all-liner .round-six .gambar-6 img{
-        width: 210px;
+        width: 180px;
         height: 180px;
     }
 
 
     .all-liner .round-seven .gambar-7{
         position: absolute;
+        top: -125px;
         right: 60px;
+        margin-top: -50px;
     }
 
     .all-liner .round-seven .gambar-7 img{
-        width: 210px;
+        width: 180px;
         height: 180px;
     }
 
@@ -2555,11 +2765,48 @@ footer .foot{
     .all-liner .round-eight .round-double-eight .gambar-8{
         position: absolute;
         left: 60px;
+        top: -180px;
     }
 
     .all-liner .round-eight .round-double-eight .gambar-8 img{
-        width: 210px;
+        width: 180px;
         height: 180px;
+    }
+
+    .all-liner .round-eight .garis-left{
+        margin-top: 95px;
+    }
+
+    .all-liner .round-eight .round-left{
+        position: absolute;
+        top: 120px;
+    }
+
+    .all-liner .round-eight .round-left .gambar-9{
+        position: absolute;
+        top: 200px;
+        margin-right: -30px;
+    }
+
+    .all-liner .round-eight .round-left .gambar-9 img{
+        width: 180px;
+        height: 200px;
+    }
+
+    .all-liner .round-eight .garis-kanan{
+        margin-left: -14px;
+        margin-top: -215px;
+    }
+
+    .all-liner .round-eight .round-kanan .gambar-10{
+        position: absolute;
+        top: 210px;
+        margin-left: -50px;
+    }
+
+    .all-liner .round-eight .round-kanan .gambar-10 img{
+        width: 180px;
+        height: 200px;
     }
 
     /* Image Meme End*/
@@ -2569,14 +2816,21 @@ footer .foot{
 
     .all-liner .round{
         margin-left: -2.4%;
+        margin-top: 100px;
     }
 
-    .all-liner .round-eight{
-        margin-left: -1%;
-    }
 
     .all-liner .round-eight{
         margin-left: -2.1%;
+    }
+
+    .all-liner .round-eight .round-kanan{
+        /* margin-left: 5px; */
+        margin-top: 30px;
+    }
+
+    .all-liner .round-eight .round-double-eight{
+        margin-top: 50px;
     }
 
     /* Bola naga End*/
@@ -2587,49 +2841,57 @@ footer .foot{
     .place-my-self .all-liner .liner-one .text-one{
         margin-top: -1520px;
         font-size: 15px;
-        margin-left: 10px;
+        margin-left: 20px;
+        width: 100%;
     }
 
     .liner-one .text-two{
         margin-top: -3050px;
+        width: 100%;
         font-size: 15px;
-        margin-left: 65px;
+        margin-left: -5px;
     }
 
     .liner-one .text-three{
         margin-top: -2580px;
-        margin-left: 10px;
+        margin-left: 20px;
         font-size: 15px;
+        width: 100%;
     }
 
     .liner-one .text-four{
         margin-top: -2150px;
         font-size: 15px;
-        margin-left: 65px;
+        margin-left: -5px;
+        width: 100%;
     }
 
     .liner-one .text-five{
         margin-top: -1665px;
         font-size: 15px;
-        margin-left: 10px;
+        margin-left: 20px;
+        width: 100%;
     }
 
     .liner-one .text-six{
         margin-top: -1210px;
         font-size: 15px;
-        margin-left: 65px;
+        margin-left: -5px;
+        width: 100%;
     }
 
     .liner-one .text-seven{
         margin-top: -750px;
         font-size: 15px;
-        margin-left: 10px;
+        margin-left: 20px;
+        width: 100%;
     }
 
     .liner-one .text-eight{
-        margin-top: -200px;
+        margin-top: -235px;
         font-size: 15px;
-        margin-left: 65px;
+        margin-left: 10px;
+        width: 100%;
     }
 
     /* Text  End*/
@@ -2665,9 +2927,38 @@ footer .foot{
         margin-top: -310px;
     }
 
+    .liner-one .day-eight{
+        margin-left: 15px;
+    }
+
 
     /* Days End*/
 
+    /* text Last */
+
+    .all-liner .round-eight .round-text-kanan{
+        width: 1000%;
+        margin-top: 130px;
+    }
+
+    .all-liner .round-eight .round-text-left{
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        margin-left: -280px;
+        width: 1000%;
+    }
+
+    .all-liner .round-eight .round-text-left p{
+        width: 260px;
+        margin-left: 90px;
+        text-align: start;
+    }
+
+
+
+
+    /* text Last End*/
 
 }
 
@@ -2680,6 +2971,158 @@ footer .foot{
         font-size: 2.3em;
         margin-bottom: 8px;
     }
+
+
+    /* Text Me */
+
+    .about-me .text-me{
+        display: grid;
+        font-size: 0.9em;
+    }
+
+    .text-me .logo{
+        width: 95%;
+    }
+
+    .text-me .logo .here .follow{
+        font-size: 0.90em;
+        width: 75%;
+    }
+
+    .main-text .text-border{
+        font-size: 0.90em;
+    }
+
+
+    /* My-Skill */
+
+    .keahlian .passion .textPassion{
+        font-size: 0.93em;
+    }
+
+    .passion-text{
+        font-size: 0.90em;
+    }
+
+    /* My-Skill End*/
+
+
+    /* Moree Again */
+
+    .place .what{
+        font-size: 0.90em;
+    }
+
+    .place .what .wedo-bold{
+        font-size: 0.90em;
+    }
+    /* Moree Again End*/
+
+    /* Box-loong */
+
+    .place .box-long{
+        font-size: 0.95em;
+    }
+
+    /* Box-loong End*/
+
+    /* Exprience Mee */
+
+    .place-my-self h1{
+        font-size: 1.75em;
+    }
+
+    .all-liner .start h2{
+        font-size: 1.50em;
+    }
+
+    .place-my-self .all-liner .liner-one .text-one{
+        font-size: 0.90em;
+    }
+
+    .liner-one .text-two{
+        font-size: 0.90em;
+    }
+
+    .liner-one .text-three{
+        font-size: 0.90em;
+    }
+
+    .liner-one .text-four{
+        font-size: 0.90em;
+    }
+
+    .liner-one .text-five{
+        font-size: 0.90em;
+    }
+
+    .liner-one .text-six{
+        font-size: 0.90em;
+    }
+
+    .liner-one .text-seven{
+        font-size: 0.90em;
+    }
+
+    .all-liner .round-eight .round-text-left{
+        font-size: 0.90em;
+    }
+
+    .all-liner .round-eight .round-text-kanan{
+        font-size: 0.90em;
+    }
+
+    /* Day Text */
+
+    .place-my-self .all-liner .liner-one .day-one{
+        font-size: 0.94em;
+    }
+
+    .liner-one .day-two{
+        font-size: 0.94em;
+    }
+
+    .liner-one .day-three{
+        font-size: 0.94em;
+    }
+
+    .liner-one .day-four{
+        font-size: 0.94em;
+    }
+
+    .liner-one .day-five{
+        font-size: 0.94em;
+    }
+
+    .liner-one .day-six{
+        font-size: 0.94em;
+    }
+
+    .liner-one .day-seven{
+        font-size: 0.94em;
+    }
+
+    .liner-one .day-eight{
+        font-size: 0.94em;
+    }
+
+    /* Day Text End*/
+
+    /* Exprience Mee End*/
+
+    /* Text Me End*/
+    
+
+    /* Photo1 */
+
+    .about-me .ganteng{
+        max-width: 75%;
+    }
+
+    /* Photo1 End*/
+
+
+
 
     .order-list{
         /* display: none; */
@@ -2734,10 +3177,559 @@ footer .foot{
     }
 
 
+    /* Bulat */
+
+    .all-liner .round{
+        width: 45px;
+        height: 45px;
+        margin-left: -3.3%;
+    }
+
+    .all-liner .round-one{
+        position: absolute;
+        top: 30.1%;
+    }
+
+    .all-liner .round-two{
+        position: absolute;
+        top: 36.1%;
+    }
+
+    .all-liner .round-three{
+        position: absolute;
+        top: 42.2%;
+    }
+
+    .all-liner .round-eight .round-double-eight{
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        
+    }
+
+    .all-liner .round-eight .round-left{
+        width: 45px;
+        height: 45px;
+    }
+
+    .all-liner .round-eight .round-kanan{
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 190px;
+        left: 160px;
+    }
+
+    /* BUlat img */
+
+    .all-liner .round-one .gambar-1{
+        margin-right: -40px;
+        margin-top: 15px;
+    }
+
+    .all-liner .round-one .gambar-1 img{
+        width: 165px;
+        height: 165px; 
+    }
+
+    .all-liner .round-two .gambar-2 img{
+        width: 165px;
+        height: 165px;
+    }
+
+    .all-liner .round-three .gambar-3 {
+        margin-right: -3px;
+    }
+
+    .all-liner .round-three .gambar-3 img{
+        width: 165px;
+        height: 165px;
+        
+    }
+
+    .all-liner .round-four .gambar-4{
+        margin-left: -15px;
+    }
+
+    .all-liner .round-four .gambar-4 img{
+        width: 165px;
+        height: 165px;
+    }
+
+    .all-liner .round-five .gambar-5 {
+        margin-right: -3px;
+    }
+
+    .all-liner .round-five .gambar-5 img{
+        width: 165px;
+        height: 165px;
+    }
+
+    .all-liner .round-six .gambar-6 img{
+        width: 165px;
+        height: 165px;
+    }
+
+    .all-liner .round-seven .gambar-7{
+        margin-right: -15px;
+    }
+
+    .all-liner .round-seven .gambar-7 img{
+        width: 165px;
+        height: 165px;
+    }
+
+    .all-liner .round-eight .round-double-eight .gambar-8 img {
+        margin-left: -10px;
+    }
+
+    .all-liner .round-eight .round-double-eight .gambar-8 img {
+        width: 165px;
+        height: 165px;
+    }
+
+    .all-liner .round-eight .round-left .gambar-9{
+        margin-right: -50px;
+    }
+
+    .all-liner .round-eight .round-left .gambar-9 img{
+        width: 165px;
+        height: 165px;
+    }
+
+    .all-liner .round-eight .round-kanan .gambar-10{
+        margin-top: -10px;
+    }
+
+    .all-liner .round-eight .round-kanan .gambar-10 img{
+        width: 165px;
+        height: 165px;
+    }
+
+    /* BUlat img End*/
+
+
+    /* Bulat End*/
+
+    /* Line */
+
+    .all-liner .round-eight .garis-kanan{
+        margin-top: -208px;
+    }
+
+    /* Line End*/
 
 }
 
+/* Responsive Device MObile all phone */
 
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+    /* some CSS here */
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        position: absolute;
+        top: -5px;
+    }
+
+    .burger{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    /* sizing Parent */
+
+    
+    .container{
+        margin: 30px;
+    }
+
+    .content{
+        margin: -50px 30px;
+    }
+
+    .adding-place {
+        margin: 50px 30px;
+    }
+
+    /* sizing Parent ENd*/
+
+    .about-me .ganteng .introduce{
+        width: 75%;
+    }
+
+    .about-me .ganteng .introduce .nameMe, .gelar{
+        font-size: 0.90em;
+    }
+    
+    /* Line */
+    
+    .liner hr{
+        width: 80%;
+    }
+
+    .pasif .linerLine{
+        margin: 150px auto;
+        /* margin-bottom: 250px; */
+        width: 80%;
+    }
+
+    .show-all .line-more hr{
+        width: 80%;
+    }
+
+    .new-place-line hr{
+        width: 80%;
+    }
+    /* Line End*/
+
+    /* About */
+    
+    .about-me .text-me .tentang-saya{
+        font-size: 1.6em;
+    }
+
+    .about-me .text-me .life-gw p{
+        font-size: 0.95em;
+    }
+
+    .text-me .logo{
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+
+    .text-me .logo .here{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .text-me .logo .here .follow{
+        width: 85%;
+        height: 70%;
+    }
+
+    .text-me .logo .here .follow h3{
+        font-size: 1.1em;
+    }
+
+    /* About Me*/
+    
+
+    /* My SKill */
+
+    .keahlian{
+        width: 90%;
+    }
+
+    .keahlian .passion .textPassion{
+        font-size: 0.88em;
+    }
+
+    .keahlian .passion .lin{
+        font-size: 0.90em;
+    }
+
+    .passion-text{
+        display: grid;
+        justify-content: center;
+    }
+    
+
+    .passion-text h1{
+        font-size: 1.55em;
+    }
+
+    .passion-text .box-col{
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .passion-text .box-col .square-box{
+        width: 95%;
+        
+    }
+
+    .passion-text .box-col .square-box img{
+        width: 90px;
+        height: 90px;
+    }
+
+    .passion-text .box-col .square-box h3{
+        font-size: 1.1em;
+    }
+    
+
+    /* My SKill End*/
+
+    /* Expreince Mee */
+    .place-my-self h1{
+        font-size: 1.55em;
+    }
+
+    .all-liner .start h2{
+        font-size: 1.40em;
+    }
+
+    .place-my-self .all-liner .liner-one{
+        display: grid;
+        grid-template-columns: 1fr 0.15fr 1fr;
+        font-size: 0.90em;
+    }
+
+    .place-my-self .all-liner .liner-one hr{
+        width: 3.5px;
+    }
+
+    .all-liner .round{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 168px;
+    }
+
+    /* ball */
+
+    .all-liner .round-eight .round-double-eight{
+        position: absolute;
+        left: -5.5px;
+        top: 25px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    /* ball End*/
+
+
+    /* Gambar */
+
+    .all-liner .round-one .gambar-1{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 190px;
+        height: 230px;
+    }
+
+    .all-liner .round-one .gambar-1 img{
+        width: 140px;
+        height: 140px;
+    }
+
+    .all-liner .round-two .gambar-2{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 150px;
+        height: 230px;
+        margin-left: -10px;
+        margin-top: 10px;
+    }
+
+    .all-liner .round-two .gambar-2 img{
+        width: 130px;
+        height: 140px;
+    }
+
+
+    .all-liner .round-three .gambar-3{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 190px;
+        height: 250px;
+        margin-right: -10px;
+    }
+
+    .all-liner .round-three .gambar-3 img{
+        width: 130px;
+        height: 140px;
+    }
+
+    .all-liner .round-four .gambar-4{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 150px;
+        height: 230px;
+        margin-left: -15px;
+        margin-top: 10px;
+    }
+
+    .all-liner .round-four .gambar-4 img{
+        width: 140px;
+        height: 140px;
+    }
+
+    .all-liner .round-five .gambar-5{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 190px;
+        height: 265px;
+        margin-right: -10px;
+    }
+
+    .all-liner .round-five .gambar-5 img{
+        width: 130px;
+        height: 140px;
+    }
+
+    .all-liner .round-six .gambar-6{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 150px;
+        height: 230px;
+        margin-left: -10px;
+        margin-top: 3px;
+    }
+
+    .all-liner .round-six .gambar-6 img{
+        width: 135px;
+        height: 140px;
+    }
+
+    .all-liner .round-seven .gambar-7{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 190px;
+        height: 295px;
+        margin-right: -15px;
+    }
+
+    .all-liner .round-seven .gambar-7 img{
+        width: 140px;
+        height: 140px;
+    }
+
+    .all-liner .round-eight .round-double-eight .gambar-8{
+        width: 250px;
+        margin-top: 155px;
+    }
+
+    .all-liner .round-eight .round-double-eight .gambar-8 img{
+        width: 130px;
+        height: 140px;
+    }
+
+    /* Gambar end*/
+
+
+    /* Text */
+    .place-my-self .all-liner .liner-one .text-one{
+        margin-top: -1600px;
+    }
+
+    .liner-one .text-two{
+        width: 100%;
+        margin-left: -15px;
+        margin-bottom: 20px;
+    }
+
+    .liner-one .text-three{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .liner-one .text-four{
+        width: 100%;
+        margin-left: -15px;
+        margin-bottom: -10px;
+    }
+
+    .liner-one .text-five{
+        width: 100%;
+        margin-bottom: -5px;
+    }
+
+    .liner-one .text-six{
+        width: 100%;
+        margin-left: -15px;
+        margin-bottom: -40px;
+    }
+
+    .liner-one .text-seven{
+        width: 100%;
+        margin-bottom: -105px;
+    }
+
+    .liner-one .text-eight{
+        width: 100%;
+        font-size: 0.90em;
+        margin-left: -10px;
+        margin-bottom: -60px;
+    }
+
+
+    /* Text End*/
+
+    /* dayss */
+
+    .place-my-self .all-liner .liner-one .day-one{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .liner-one .day-two{
+        width: 105%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .liner-one .day-three {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .liner-one .day-four{
+        width: 105%;
+        display: flex;
+        justify-content: center;
+        padding-top: 16px;
+    }
+
+    .liner-one .day-five {
+        width: 90%;
+        justify-content: center;
+        padding-top: 23px;
+    }
+
+    .liner-one .day-six{
+        width: 105%;
+        display: flex;
+        justify-content: center;
+        padding-top: 37px;
+    }
+
+    .liner-one .day-seven {
+        width: 65%;
+        justify-content: center;
+        padding-top: 70px;
+    }
+
+    
+    /* dayss End*/
+
+    /* Expreince Mee End*/
+
+
+}
+  
+
+
+/* Responsive Device MObile all phone End*/
 
 /* Responsive break point End*/
 

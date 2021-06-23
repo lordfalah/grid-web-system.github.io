@@ -490,6 +490,15 @@ const inClick = () =>{
 inClick();
 // click end
 
+// Footer Display
+
+// const footer = () =>{
+//     const getFooter = document.querySelector("footer");
+//     const clickText = document.querySelector(".show-all .text-more h2");
+
+// }
+
+// Footer Display End
 
 // Exprience Me
 
