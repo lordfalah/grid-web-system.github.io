@@ -452,7 +452,7 @@ const clickingRound = () =>{
             }
 
             if(e.target.classList[1] == "round-left"){
-                console.log("999");
+                // console.log("999");
 
                 getImg9.classList.add("image9");
 
@@ -461,7 +461,7 @@ const clickingRound = () =>{
             if(e.target.classList[1] == "round-kanan"){
                 getImg10.classList.add("image10");
 
-                console.log("10")
+                // console.log("10")
             }
             
         })
@@ -538,8 +538,8 @@ function addingNewPlace(boelan){
     const roundSix = document.querySelector(".round-six");
     const roundSeven = document.querySelector(".round-seven");
     const swapDouble = document.querySelector(".all-liner .round-eight .round-double-eight");
-    const roundNine = document.querySelector(".round-eight .right-left-line .round-left");
-    const roundTen = document.querySelector(".round-eight .right-left-line .round-kanan");
+    const roundNine = document.querySelector(".round-eight .round-left");
+    const roundTen = document.querySelector(".round-eight .round-kanan");
     // Oval Parent End
 
     // Line Effect
@@ -548,15 +548,15 @@ function addingNewPlace(boelan){
     const lineRight = document.querySelector(".all-liner .round-eight .garis-kanan");
 
 
-    const textLeft = document.querySelector(".all-liner .round-eight .round-text-left");
-    const textRight = document.querySelector(".all-liner .round-eight .round-text-kanan");
+    const textLeft = document.querySelector(".all-liner .round-text-left .main-text-left");
+    const textRight = document.querySelector(".all-liner .round-text-kanan .main-text-kanan");
     // Line Effect END
 
 
     if(boelan === true){
         $(window).scroll(function(){
             const wScroll = $(this).scrollTop();
-            // console.log(wScroll);
+            console.log(wScroll);
             if(wScroll >= $(getNewPlaceParent).offset().top - -500){
                 // console.log("keajaiban");
                 // getHrLine.classList.add("colorF")
@@ -566,6 +566,7 @@ function addingNewPlace(boelan){
 
             if(wScroll >= $(".new-place-line").offset().top - 740){
                 lineEfect.classList.add("effect-line");
+                // console.log("OKO")
             };
 
             if(wScroll >= $(".place-my-self").offset().top - 715){
@@ -577,6 +578,11 @@ function addingNewPlace(boelan){
                 // console.log("Start h2");
                 h2Swap.classList.add("swapTopH2");
             };
+
+            if(wScroll >= $(lineMid).offset().top - 900){
+                // console.log("line");
+                lineMid.classList.add("lineMid");
+            }
 
             if(wScroll >= $(dayOne).offset().top - -990){
                 // console.log("text1")
@@ -699,17 +705,14 @@ function addingNewPlace(boelan){
                 swapDouble.classList.add("swapDouble")
             }
 
-            if(wScroll >= $(roundNine).offset().top - 660){
-                // console.log("Nine");
+            if(wScroll >= $(roundNine).offset().top - 150){
+                console.log("Nine");
                 roundNine.classList.add("bulat9")
-            }
-
-            if(wScroll >= $(roundTen).offset().top - 660){
-                // console.log("TEn");
                 roundTen.classList.add("bulat10")
             }
 
-            if(roundTen.classList.contains("bulat10")){
+
+            if(roundNine.classList.contains("bulat9")){
                 // console.log("Ada nie");
                 setTimeout(() =>{
                     lineLeft.classList.add("line-1-left");
@@ -720,16 +723,13 @@ function addingNewPlace(boelan){
             if(wScroll >= $(textLeft).offset().top - 660){
                 // console.log("TextLeft");
                 textLeft.classList.add("swapTextNine");
+                textRight.classList.add("swapTextTen");
             }
 
-            if(wScroll >= $(textRight).offset().top - 660){
-                textRight.classList.add("swapTextTen")
-            }
-
-            if(wScroll >= $(lineMid).offset().top - 1000){
-                // console.log("MIDDD");
-                lineMid.classList.add("lineMid");
-            }
+            // if(wScroll >= $(lineMid).offset().top - 1000){
+            //     // console.log("MIDDD");
+            //     lineMid.classList.add("lineMid");
+            // }
 
             // Rounded Oval End
         })
