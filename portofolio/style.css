@@ -10,6 +10,58 @@ body{
     height: 100%;
 }
 
+/* Back img */
+
+body .back-img{
+    /* width: 100%; */
+    height: 75%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    display: grid;
+    grid-template-areas: 
+                            "img1 img1 img2"
+                            "img1 img1 img3";
+    /* grid-template-columns: 0.9fr 1fr 1fr; */
+    filter: grayscale(20%) sepia(15%) blur(3px) brightness(115%) hue-rotate(50deg) saturate(95%) opacity(97%) contrast(105%);
+    -webkit-filter: grayscale(20%) sepia(15%) blur(3px) brightness(115%) hue-rotate(50deg) saturate(95%) opacity(97%) contrast(105%);
+    -moz-filter: grayscale(20%) sepia(15%) blur(3px) brightness(115%) hue-rotate(50deg) saturate(95%) opacity(97%) contrast(105%);
+}
+
+.back-img .head{
+    grid-area: img1;
+    background-image: url(../nobar/img/human2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.back-img .head-2{
+    grid-area: img2;
+    background-image: url(../nobar/img/kaos.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.back-img .head-3{
+    grid-area: img3;
+    background-image: url(../nobar/img/walker.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Back img ENd*/
+
+
 .container{
     margin: 50px;
     display: grid;
@@ -23,6 +75,9 @@ body{
                         "head head ture";
     grid-template-columns: 0.5fr ;
     color: white;
+    box-shadow: 0px 5px 15px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 5px 15px 3px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 5px 15px 3px rgba(0,0,0,0.6);
 }
 
 
@@ -116,10 +171,12 @@ body{
     padding: 4px;
     /* width: 150px; */
     transition: 0.50s ease;
+    border: 2.5px solid white;
+    box-sizing: border-box;
 }
 
 .order-list li a:hover{
-    background-color: rgb(218, 217, 195);
+    background-color: white;
     color: black;
     font-weight: bolder;
     text-shadow: 0 0 2px rgb(255, 255, 255);
@@ -832,6 +889,7 @@ body{
 
 .my-project{
     margin: 80px 10px 0 0;
+    width: 75%;
     display: grid;
     justify-content: start;
     justify-items: center;
@@ -2220,8 +2278,8 @@ footer .foot{
     }
 
     .all-liner .round-one .gambar-1 img{
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
     }
 
     .all-liner .round-two .gambar-2{
@@ -2230,8 +2288,8 @@ footer .foot{
     }
 
     .all-liner .round-two .gambar-2 img{
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
     }
 
     .all-liner .round-three .gambar-3{
@@ -2240,8 +2298,8 @@ footer .foot{
     }
 
     .all-liner .round-three .gambar-3 img{
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
     }
 
     .all-liner .round-four .gambar-4{
@@ -2250,8 +2308,8 @@ footer .foot{
     }
 
     .all-liner .round-four .gambar-4 img{
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
     }
 
     .all-liner .round-five .gambar-5{
@@ -2260,8 +2318,8 @@ footer .foot{
     }
 
     .all-liner .round-five .gambar-5 img{
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
     }
 
     .all-liner .round-six .gambar-6{
@@ -2270,8 +2328,8 @@ footer .foot{
     }
 
     .all-liner .round-six .gambar-6 img {
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
     }
 
     
@@ -2281,8 +2339,8 @@ footer .foot{
     }
 
     .all-liner .round-seven .gambar-7 img{
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
     }
 
     .all-liner .round-eight .round-double-eight .gambar-8{
@@ -2292,11 +2350,19 @@ footer .foot{
     }
 
     .all-liner .round-eight .round-double-eight .gambar-8 img {
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
     }
 
+    .all-liner .place-for-line .round-text-kanan .gambar-9 img{
+        width: 200px;
+        height: 200px;
+    }
 
+    .all-liner .place-for-line .gambar-10 img{
+        width: 200px;
+        height: 200px;
+    }
 
 
     /* Img Sizing Meme End*/
@@ -2776,7 +2842,7 @@ footer .foot{
     .all-liner .round-eight .round-double-eight .gambar-8{
         position: absolute;
         left: 60px;
-        top: -180px;
+        top: -280px;
     }
 
     .all-liner .round-eight .round-double-eight .gambar-8 img{
@@ -2791,21 +2857,14 @@ footer .foot{
         margin-right: -30px;
     }
 
-    .all-liner .round-eight .round-left .gambar-9 img{
-        width: 180px;
-        height: 200px;
+    .all-liner .place-for-line .gambar-10 img{
+        width: 185px;
+        height: 185px;
     }
 
-
-    .all-liner .round-eight .round-kanan .gambar-10{
-        position: absolute;
-        top: 210px;
-        margin-left: -50px;
-    }
-
-    .all-liner .round-eight .round-kanan .gambar-10 img{
-        width: 180px;
-        height: 200px;
+    .all-liner .place-for-line .round-text-kanan .gambar-9 img{
+        width: 190px;
+        height: 190px;
     }
 
     /* Image Meme End*/
@@ -3448,16 +3507,38 @@ footer .foot{
         top: 50%;
     }
 
+    .all-liner .round-eight .round-kanan{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: -9.5px;
+    }
+
+    .all-liner .round-eight .round-left{
+        width: 40px;
+        height: 40px;
+    }
+
     /* ball End*/
 
     /* Line */
 
     .all-liner .round-eight .garis-left{
         transform: rotate(60deg);
+        /* width: 250px; */
         height: 4px;
         position: absolute;
         top: 92%;
         left: -39px;
+    }
+
+    .all-liner .round-eight .garis-kanan{
+        height: 4px;
+        transform: rotate(-60deg);
+        position: absolute;
+        top: 92%;
+        right: -78px;
+
     }
 
     /* Line End*/
@@ -3470,7 +3551,7 @@ footer .foot{
         justify-content: center;
         align-items: flex-end;
         width: 190px;
-        height: 230px;
+        height: 150px;
     }
 
     .all-liner .round-one .gambar-1 img{
@@ -3483,9 +3564,8 @@ footer .foot{
         justify-content: flex-start;
         align-items: flex-end;
         width: 150px;
-        height: 230px;
+        height: 182px;
         margin-left: -10px;
-        margin-top: 10px;
     }
 
     .all-liner .round-two .gambar-2 img{
@@ -3499,7 +3579,7 @@ footer .foot{
         justify-content: flex-end;
         align-items: flex-end;
         width: 190px;
-        height: 250px;
+        height: 192px;
         margin-right: -10px;
     }
 
@@ -3513,9 +3593,8 @@ footer .foot{
         justify-content: flex-start;
         align-items: flex-end;
         width: 150px;
-        height: 230px;
+        height: 225px;
         margin-left: -15px;
-        margin-top: 10px;
     }
 
     .all-liner .round-four .gambar-4 img{
@@ -3528,7 +3607,7 @@ footer .foot{
         justify-content: flex-end;
         align-items: flex-end;
         width: 190px;
-        height: 265px;
+        height: 242px;
         margin-right: -10px;
     }
 
@@ -3542,9 +3621,8 @@ footer .foot{
         justify-content: flex-start;
         align-items: flex-end;
         width: 150px;
-        height: 230px;
+        height: 267px;
         margin-left: -10px;
-        margin-top: 3px;
     }
 
     .all-liner .round-six .gambar-6 img{
@@ -3557,7 +3635,7 @@ footer .foot{
         justify-content: flex-end;
         align-items: flex-end;
         width: 190px;
-        height: 295px;
+        height: 310px;
         margin-right: -15px;
     }
 
@@ -3676,6 +3754,16 @@ footer .foot{
     /* dayss End*/
 
     /* Expreince Mee End*/
+
+    /* place for line */
+
+    .all-liner .place-for-line{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    /* place for line End*/
 
 
 }
