@@ -1,3 +1,21 @@
+const myBurger = () =>{
+    const getAllBurger = document.querySelectorAll(".order-list li a");
+
+    getAllBurger.forEach(burger =>{
+        burger.addEventListener("click", function(){
+            const getElement = this.getAttribute("href");
+            const parentElement = document.querySelector(getElement);
+            console.log(parentElement);
+        })
+    })
+
+};
+
+myBurger();
+
+
+
+
 // text
 const myText = () =>{
 
@@ -885,6 +903,124 @@ function effectFrame(resultOrder, getAllOrder){
         };
     });
 };
+
+
+
+
+// responsive media divice js
+
+if(window.matchMedia("screen and (max-device-width: 480px) and (orientation: portrait)").matches){
+    
+    const responsive = () =>{
+        const getHrLine = document.querySelector(".place-my-self .all-liner .liner-one hr.line-effect");
+        const getNewPlaceParent = document.querySelector(".adding-place");
+        // console.log(getNewPlaceParent);
+
+        const lineMid = document.querySelector(".place-my-self .all-liner .liner-one hr");
+
+        const lineEfect = document.querySelector(".new-place-line hr");
+        const h1Swap = document.querySelector(".place-my-self h1");
+        const h2Swap = document.querySelector(".start h2");
+        const dayOne = document.querySelector(".liner-one .day-one");
+        const textOne = document.querySelector(".liner-one .text-one");
+        const dayTwo = document.querySelector(".day-two");
+        const swapLeftTwo = document.querySelector(".all-liner .text-two");
+        const dayThree = document.querySelector(".liner-one .day-three");
+        const swapLeftThree = document.querySelector(".liner-one .text-three");
+        const swapLeftFour = document.querySelector(".liner-one .text-four");
+        const swapDayFour = document.querySelector(".liner-one .day-four");
+        const swapDayFive = document.querySelector(".liner-one .day-five");
+        const swapRightFive = document.querySelector(".liner-one .text-five");
+        const swapTextSix = document.querySelector(".liner-one .text-six");
+        const swapDaySix = document.querySelector(".liner-one .day-six");
+        const swapDaySeven = document.querySelector(".liner-one .day-seven");
+        const swapTextSeven = document.querySelector(".liner-one .text-seven");
+        const swapTextEight = document.querySelector(".liner-one .text-eight");
+        const swapDayEight = document.querySelector(".liner-one .day-eight");
+
+        // Oval Parent
+        const roundOne = document.querySelector(".round-one");
+        const roundTwo = document.querySelector(".round-two");
+        const roundThree = document.querySelector(".round-three");
+        const roundFour = document.querySelector(".round-four");
+        const roundFive = document.querySelector(".round-five");
+        const roundSix = document.querySelector(".round-six");
+        const roundSeven = document.querySelector(".round-seven");
+        const swapDouble = document.querySelector(".all-liner .round-eight .round-double-eight");
+        const roundNine = document.querySelector(".round-eight .round-left");
+        const roundTen = document.querySelector(".round-eight .round-kanan");
+        // Oval Parent End
+
+        // Line Effect
+
+        const lineLeft = document.querySelector(".all-liner .round-eight .garis-left");
+        const lineRight = document.querySelector(".all-liner .round-eight .garis-kanan");
+
+
+        const textLeft = document.querySelector(".all-liner .round-text-left .main-text-left");
+        const textRight = document.querySelector(".all-liner .round-text-kanan .main-text-kanan");
+        // Line Effect END
+
+        // Text Click
+    
+        const moreAgain = document.querySelector(".show-all .text-more h2");
+
+        // Text Click
+
+
+        moreAgain.addEventListener("click", function(){
+            $(window).scroll(function(){
+                const wScrool = $(this).scrollTop();
+                console.log(wScrool);
+
+                if(wScrool >= $(textOne).offset().top - -1070){
+                    // console.log("textOne");
+                    textOne.classList.add("swapLeft1");
+                };
+
+                // Jika class parent pertama lebih dahulu / terlalu lama, tinggal #panggil
+
+                if(wScrool >= $(lineMid).offset().top - 1000){
+                    // console.log("garisTengah");
+                    lineMid.classList.add("lineMid");
+                    // console.log(lineMid)
+                }
+
+                if(wScrool >= $(swapLeftTwo).offset().top - -810){
+                    // console.log("text2");
+
+                    swapLeftTwo.classList.add("swap2");
+                }
+                
+                if(wScrool >= $(dayTwo).offset().top - 740){
+                    // console.log("day2");
+
+                    dayTwo.classList.add("swapDayTwo");
+
+                }
+
+                if(wScrool >= $(swapLeftThree).offset().top - -600){
+                    console.log("text3");
+                    swapLeftThree.classList.add("swap3")
+                }
+
+            })
+        })
+
+    }
+
+    responsive();
+
+
+}
+
+// responsive media divice js End
+
+
+
+
+
+
 
 // Resonsive media query js End
 

@@ -2144,13 +2144,78 @@ footer .foot{
     position: absolute;
     bottom: -350px;
     width: 100%;
-    height: 350px;
-    background-color: yellow;
+    /* height: 400px; */
+    background-color: rgb(26, 22, 31);
     color: white;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 }
+
+footer .foot .place-down{
+    display: grid;
+    grid-template-columns: 0.7fr 2fr;
+    padding: 40px;
+    box-sizing: border-box;
+    column-gap: 30px;
+}
+
+.foot .place-down .kaki-place-1 .text-kaki-1 p{
+    text-align: start;
+}
+
+.foot .place-down .kaki-place-2 .place-tex2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot .place-down .kaki-place-2 .visit-me{
+    display: grid;
+    width: 100%;
+    height: 92.5%;   
+    /* grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.kaki-place-2 .visit-me .text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.kaki-place-2 .visit-me .text p{
+    cursor: pointer;
+}
+
+.kaki-place-2 .visit-me .text-place{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    row-gap: 50px;
+    margin-top: 20px;
+}
+
+.foot .change-place-text{
+    width: 100%;
+    height: 40px;
+    background-color: aliceblue;
+    margin: auto;
+}
+
+.foot .middle-text{
+    width: 90.1%;
+    text-align: center;
+    padding: 40px;
+}
+
+
+
 /* New Place Footer */
 
 
@@ -3392,7 +3457,8 @@ footer .foot{
     /* Line End*/
 
     /* About */
-    
+
+
     .about-me .text-me .tentang-saya{
         font-size: 1.6em;
     }
@@ -3400,6 +3466,11 @@ footer .foot{
     .about-me .text-me .life-gw p{
         font-size: 0.95em;
     }
+
+    .my-project{
+        margin-top: 250px;
+    }
+
 
     .text-me .logo{
         margin-top: 80px;
@@ -3422,6 +3493,21 @@ footer .foot{
 
     .text-me .logo .here .follow h3{
         font-size: 1.1em;
+    }
+
+    /* Img logo */
+
+    .text-me .logo img{
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Img logo End*/
+
+
+    .main-text h3.crash.rot{
+        transform: rotate(90deg) translate(-50px, 120px);
+        font-size: 1em;
     }
 
     /* About Me*/
@@ -3453,17 +3539,18 @@ footer .foot{
 
     .passion-text .box-col{
         width: 100%;
-        padding-top: 20px;
+        /* padding-top: 20px; */
+        margin-top: -30px;
     }
 
     .passion-text .box-col .square-box{
         width: 95%;
-        
+        height: 30%;
     }
 
     .passion-text .box-col .square-box img{
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
     }
 
     .passion-text .box-col .square-box h3{
@@ -3474,6 +3561,11 @@ footer .foot{
     /* My SKill End*/
 
     /* Expreince Mee */
+
+
+
+
+    
     .place-my-self h1{
         font-size: 1.55em;
     }
@@ -3490,7 +3582,11 @@ footer .foot{
 
     .place-my-self .all-liner .liner-one hr{
         width: 3.5px;
+
     }
+
+
+
 
     .all-liner .round{
         width: 40px;
@@ -3542,6 +3638,12 @@ footer .foot{
     }
 
     /* Line End*/
+
+
+    /* Text Base */
+    /* Text Base End*/
+
+
 
 
     /* Gambar */
@@ -3662,15 +3764,40 @@ footer .foot{
         margin-top: -1600px;
     }
 
+    .place-my-self .all-liner .liner-one .text-one.leftTextOne{
+        transform: translateX(300px);
+    }
+
+    .place-my-self .all-liner .liner-one .text-one.leftTextOne.swapLeft1{
+        transform: translateX(0px);
+    }
+    
+
     .liner-one .text-two{
         width: 100%;
         margin-left: -15px;
         margin-bottom: 20px;
     }
 
+    .liner-one .text-two.swapLeftTwo{
+        transform: translateX(-300px);
+    }
+    
+    .liner-one .text-two.swapLeftTwo.swap2{
+        transform: translateX(0px);
+    }
+
     .liner-one .text-three{
         width: 100%;
         margin-bottom: 15px;
+    }
+
+    .liner-one .text-three.swapLeftThree{
+        transform: translateX(300px);
+    }
+
+    .liner-one .text-three.swapLeftThree.swap3{
+        transform: translateX(0px);
     }
 
     .liner-one .text-four{
@@ -3717,7 +3844,14 @@ footer .foot{
         width: 105%;
         display: flex;
         justify-content: center;
+        transform: translateX(-300px);
     }
+
+    .liner-one .day-two.swapDayTwo{
+        transform: translateX(0px);
+    }
+
+
 
     .liner-one .day-three {
         width: 90%;
