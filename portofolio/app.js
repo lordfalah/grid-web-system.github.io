@@ -373,6 +373,80 @@ function skillFont(skilling){
 // Skill End
 
 
+// Article img slider
+
+const photoSertifikat = document.querySelector(".photo-sertifikat");
+const photoImg = document.querySelectorAll(".photo-sertifikat img");
+
+// btn 
+// Terbalik :'(
+const nextBtn = document.querySelector("#previous");
+const prevbtn = document.querySelector("#next");
+// console.log(nextBtn, prevbtn)
+
+let count = 1;
+
+let sizing = photoImg[0].getBoundingClientRect().width;
+
+const img = photoSertifikat.style.transform = `translateX(${-sizing * count}px)`;
+console.log(img);
+console.log(sizing);
+
+
+nextBtn.addEventListener("click" ,function(){
+    if(count >= photoImg.length -1) return;
+
+    photoSertifikat.style.transition = `0.40s ease-in-out`;
+
+    count++;
+    console.log(count);
+
+    photoSertifikat.style.transform = `translateX(${-sizing * count}px)`;
+
+});
+
+prevbtn.addEventListener("click", function(){
+    if(count <= 0) return;
+    photoSertifikat.style.transition = `0.40s ease-in-out`;
+
+    count--;
+    console.log(count);
+
+    photoSertifikat.style.transform = `translateX(${-sizing * count}px)`;
+})
+
+photoSertifikat.addEventListener("transitionend", function(){
+    console.log(photoImg[count]);
+
+    if(photoImg[count].id === "last-clone"){
+        console.log("last");
+
+        photoSertifikat.style.transition = "none";
+        count = photoImg.length - count;
+        console.log(count);
+
+        photoSertifikat.style.transform = `translateX(${-sizing * count}px)`;
+    };
+
+    if(photoImg[count].id === "first-clone"){
+        console.log("first");
+
+        photoSertifikat.style.transition = "none";
+        count = photoImg.length -2;
+        console.log(count);
+
+        photoSertifikat.style.transform = `translate(${-sizing * count}px)`;
+
+    }   
+
+})
+
+
+
+
+// Article img slider End
+
+
 const clickMore = () =>{
     const getMore = document.querySelector(".text-more h2");
 
