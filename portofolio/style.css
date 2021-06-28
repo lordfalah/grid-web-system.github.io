@@ -2214,6 +2214,7 @@ footer .foot .place-down{
     padding: 40px;
     box-sizing: border-box;
     column-gap: 30px;
+    row-gap: 30px;
 }
 
 .foot .place-down .kaki-place-1 .text-kaki-1 p{
@@ -2232,6 +2233,7 @@ footer .foot .place-down{
     height: 92.5%;   
     /* grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr; */
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-content: space-around;
     grid-template-rows: repeat(1, 1fr);
     align-items: center;
     /* gap: 15px; */
@@ -2268,7 +2270,7 @@ footer .foot .place-down{
 }
 
 .foot .middle-text{
-    width: 90.1%;
+    /* width: 90.1%; */
     text-align: center;
     padding: 40px;
 }
@@ -3987,10 +3989,15 @@ footer .foot .place-down{
 
     .container-slide .photo-parent{
         width: 150px;
+        height: 50%;
     }
 
     .photo-parent .photo-sertifikat{
         height: 150px;
+    }
+
+    .kaki-place-2 .visit-me .text-place p{
+        text-align: start;
     }
 
 }
