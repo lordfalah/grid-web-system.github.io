@@ -1,12 +1,25 @@
 const myBurger = () =>{
-    const getAllBurger = document.querySelectorAll(".order-list li a");
+    const getAllList = document.querySelectorAll(".order-list li a");
+    const getBody = document.querySelector("body");
+    const getNav = document.querySelector("nav");
 
-    getAllBurger.forEach(burger =>{
-        burger.addEventListener("click", function(){
+
+    getAllList.forEach(list =>{
+        // list.classList.remove("fadeOrder");
+        // console.log(getAlllist[0]);
+
+        list.addEventListener("click", function(){
+
+            getBody.classList.remove("scrollHidden");
+            getNav.classList.remove("slideShow");
+
             const getElement = this.getAttribute("href");
             const parentElement = document.querySelector(getElement);
             console.log(parentElement);
-        })
+        });
+
+
+
     })
 
 };
@@ -866,6 +879,7 @@ function slideBurger(){
     const getBurger = document.querySelector(".burger");
     const getNav = document.querySelector(".navbar");
     const getBody = document.querySelector("body");
+    const getAllList = document.querySelectorAll(".order-list li a");
 
     // In Mouse Over
     getBurger.addEventListener("mouseover", function(){
@@ -937,8 +951,20 @@ function responsive(){
         getBurger.addEventListener("click", function(){
             
             setTimeout(() =>{
-                getAllOrder.forEach(order =>{
+                 getAllOrder.forEach((order, i) =>{
                     order.classList.toggle("fadeOrder");
+
+                    if(order.classList.contains("fadeOrder")){
+                        // console.log("fadeOrder");
+
+                        order.addEventListener("click", function(){
+                            if(i == 1 || i == 0 || i == 2 || i == 3){
+                                order.classList.remove("fadeOrder")
+                            }
+                        })
+                        
+                    }
+                    
                 })
             }, 900)
             

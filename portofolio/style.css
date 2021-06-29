@@ -3984,21 +3984,76 @@ footer .foot .place-down{
 
     .container-slide{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        row-gap: 20px;
     }
 
+    .photo-parent button{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .photo-parent #next{
+        left: 70px;
+    }
+
+    .photo-parent #previous{
+        right: 70px;
+    }
+
+
+
     .container-slide .photo-parent{
-        width: 150px;
-        height: 50%;
+        width: 180px;
+        height: 100%;
     }
 
     .photo-parent .photo-sertifikat{
         height: 150px;
+        
     }
 
     .kaki-place-2 .visit-me .text-place p{
         text-align: start;
     }
+
+
+    /* footer */
+
+
+    .foot .place-down .kaki-place-2 .visit-me{
+        display: grid;
+        /* justify-content: space-between; */
+        /* justify-items: space-between; */
+        align-items: flex-start;
+    }
+
+    .foot .place-down .kaki-place-2 .place-tex2 .text-foot-2{
+        text-align: end;
+    }
+
+    .kaki-place-2 .visit-me .text-account{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .kaki-place-2 .visit-me .text-place{
+        row-gap: 20px;
+    }
+
+
+    footer .foot{
+        position: absolute;
+        bottom: -600px;
+    }
+
+    .foot .middle-text{
+        padding: 60px;
+    }
+
+    /* footer End*/
 
 }
   
