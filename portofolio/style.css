@@ -1123,6 +1123,7 @@ footer{
     margin-top: -35px;
 }
 
+
 /* Design Web */
 
 .box-long .brand-design{
@@ -1139,7 +1140,7 @@ footer{
 }
 
 .brand-design .text-brand .title-brand, p{
-    text-align: center;
+    text-align: start;
     /* padding: 10px; */
 }
 
@@ -2227,6 +2228,8 @@ footer .foot .place-down{
     align-items: center;
 }
 
+
+
 .foot .place-down .kaki-place-2 .visit-me{
     display: grid;
     width: 100%;
@@ -2261,6 +2264,7 @@ footer .foot .place-down{
     row-gap: 30px;
     margin-top: 20px;
 }
+
 
 .foot .change-place-text{
     width: 100%;
@@ -3206,7 +3210,7 @@ footer .foot .place-down{
     }
 
     .place .what .wedo-bold{
-        font-size: 0.90em;
+        font-size: 0.80em;
     }
     /* Moree Again End*/
 
@@ -3639,7 +3643,26 @@ footer .foot .place-down{
     .passion-text .box-col .square-box h3{
         font-size: 1.1em;
     }
+
+    .place .box-long{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .place .box-long p, h3{
+        text-align: center;
+    }
+
+    .web-design .text-laptop .title-laptop{
+        margin-top: -40px;
+    }
     
+    .app-design .text-app{
+        margin-bottom: 5px;
+    }
 
     /* My SKill End*/
 
@@ -3980,6 +4003,10 @@ footer .foot .place-down{
         gap: 20px;
     }
 
+    .all-liner .place-for-line p{
+        text-align: center;
+    }
+
     /* place for line End*/
 
     .container-slide{
@@ -4021,6 +4048,16 @@ footer .foot .place-down{
 
 
     /* footer */
+    footer .foot .place-down .kaki-place-1 .text-kaki-1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    footer .foot .place-down .kaki-place-1 .text-kaki-1 p{
+        text-align: center;
+    }
 
 
     .foot .place-down .kaki-place-2 .visit-me{
@@ -4030,7 +4067,7 @@ footer .foot .place-down{
         align-items: flex-start;
     }
 
-    .foot .place-down .kaki-place-2 .place-tex2 .text-foot-2{
+    .foot .place-down .kaki-place-2 .place-tex2 .text-foot-2 h3{
         text-align: end;
     }
 
@@ -4041,6 +4078,10 @@ footer .foot .place-down{
 
     .kaki-place-2 .visit-me .text-place{
         row-gap: 20px;
+    }
+
+    .foot .place-down .kaki-place-2 .place-tex2 .text-kaki-2 h3{
+        text-align: start;
     }
 
 

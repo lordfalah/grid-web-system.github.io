@@ -15,7 +15,11 @@ const myBurger = () =>{
 
             const getElement = this.getAttribute("href");
             const parentElement = document.querySelector(getElement);
-            console.log(parentElement);
+
+            $("html, body").animate({
+                scrollTop: parentElement.offsetTop + 250
+            }, 800)
+
         });
 
 
@@ -959,7 +963,11 @@ function responsive(){
 
                         order.addEventListener("click", function(){
                             if(i == 1 || i == 0 || i == 2 || i == 3){
-                                order.classList.remove("fadeOrder")
+                                // order.classList.remove("fadeOrder");
+                                getAllOrder[0].classList.remove("fadeOrder");
+                                getAllOrder[1].classList.remove("fadeOrder");
+                                getAllOrder[2].classList.remove("fadeOrder");
+                                getAllOrder[3].classList.remove("fadeOrder");
                             }
                         })
                         
