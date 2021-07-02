@@ -411,7 +411,7 @@ console.log(sizing);
 
 
 nextBtn.addEventListener("click" ,function(){
-    if(count >= photoImg.length -1) return;
+    if(count >= photoImg.length -1) return 0;
 
     photoSertifikat.style.transition = `0.40s ease-in-out`;
 
@@ -458,7 +458,27 @@ photoSertifikat.addEventListener("transitionend", function(){
 
 })
 
+const sertifikat = ()=>{
+    const parentSertifikat = document.querySelector("aside");
+    const photoSer = document.querySelector(".container-slide .photo-parent");
+    const textSer = document.querySelector(".container-slide .my-text-sertifikat");
 
+    $(window).scroll(function(){
+        const wScroll = $(this).scrollTop();
+        console.log(wScroll);
+
+        if(wScroll >= $(parentSertifikat).offset().top - 450){
+            photoSer.classList.add("photoCertification");
+            textSer.classList.add("textCertificate");
+            console.log("sasassa")
+        }
+
+    })
+    
+
+};
+
+sertifikat();
 
 
 // Article img slider End
@@ -952,6 +972,7 @@ function responsive(){
         const getAllOrder = document.querySelectorAll(".order-list li a");
 
         const getBurger = document.querySelector(".burger");
+
         getBurger.addEventListener("click", function(){
             
             setTimeout(() =>{
@@ -968,6 +989,15 @@ function responsive(){
                                 getAllOrder[1].classList.remove("fadeOrder");
                                 getAllOrder[2].classList.remove("fadeOrder");
                                 getAllOrder[3].classList.remove("fadeOrder");
+
+
+                                getBurger.classList.remove("first");
+                                getBurger.classList.remove("second");
+                                getBurger.classList.remove("thirth")
+                                getBurger.classList.remove("pertama")
+                                getBurger.classList.remove("kedua");
+                                getBurger.classList.remove("ketiga");
+                                
                             }
                         })
                         

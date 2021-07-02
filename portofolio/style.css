@@ -985,7 +985,15 @@ aside{
     /* justify-items: center; */
     align-content: flex-start;
     gap: 20px;
+    transition: 0.80s ease-in-out;
+    transform: translateX(-650px);
 }
+
+.container-slide .my-text-sertifikat.textCertificate{
+    transform: translateX(0px);
+
+}
+
 
 .container-slide .my-text-sertifikat p{
     text-align: start;
@@ -1001,6 +1009,12 @@ aside{
     justify-content: center;
     gap: 20px;
     align-items: center;
+    transform: translateX(700px);
+    transition: 0.80s ease-in-out;
+}
+
+.container-slide .photo-parent.photoCertification{
+    transform: translateX(0px);
 }
 
 .photo-parent .photo-sertifikat{
@@ -2334,6 +2348,12 @@ footer .foot .place-down{
         grid-area: text1;        
     }
 
+    /* Order-list */
+
+
+    /* Order-list End*/
+
+
     .my-project{
         grid-area: picture2;
         width: 40%;
@@ -3493,7 +3513,7 @@ footer .foot .place-down{
 
     .burger{
         position: absolute;
-        top: 0;
+        top: 3px;
         right: 0;
     }
 
@@ -4037,6 +4057,10 @@ footer .foot .place-down{
         height: 100%;
     }
 
+    .container-slide .my-text-sertifikat{
+        font-size: 0.90rem;
+    }
+
     .photo-parent .photo-sertifikat{
         height: 150px;
         
@@ -4048,6 +4072,11 @@ footer .foot .place-down{
 
 
     /* footer */
+
+    footer .foot .place-down{
+        font-size: 0.97rem;
+    }
+
     footer .foot .place-down .kaki-place-1 .text-kaki-1{
         display: flex;
         flex-wrap: wrap;
@@ -4057,6 +4086,10 @@ footer .foot .place-down{
 
     footer .foot .place-down .kaki-place-1 .text-kaki-1 p{
         text-align: center;
+    }
+
+    .foot .place-down .kaki-place-2 .place-tex2{
+        font-size: 0.86rem;
     }
 
 
