@@ -17,7 +17,7 @@ const myBurger = () =>{
             const parentElement = document.querySelector(getElement);
 
             $("html, body").animate({
-                scrollTop: parentElement.offsetTop + 250
+                scrollTop: parentElement.offsetTop + 180
             }, 800)
 
         });
@@ -168,7 +168,7 @@ const effectPhoto = () =>{
 
             if(getSecondPhoto.classList.contains("second-border")){
                 $(".second-border").css({
-                    "transform": `translate(0, ${wScroll / -35}%)`,
+                    "transform": `translate(0, ${wScroll / -45}%)`,
                     "margin-top": `25px`
                 })
             }
@@ -176,7 +176,7 @@ const effectPhoto = () =>{
             if(getFirstPhoto.classList.contains("first-border")){
                 // console.log("SOME");
                 $(".first-border").css({
-                    "transform": `translate(0, ${wScroll / -30}%)`,
+                    "transform": `translate(0, ${wScroll / -35}%)`,
                     "margin-bottom": `20px`
                 })
             }
@@ -286,11 +286,11 @@ const mySkill = () => {
                 if(lin.classList.contains("oval")){
                     // console.log("ada oval");
                     setTimeout(() =>{
-                        $(".absord").css({
-                            "transform": `translate(0, ${wScroll / -38}%)`,
-                            "transition": `0.80s ease`,
-                            "margin-top": `200px`
-                        });
+                        // $(".absord").css({
+                        //     "transform": `translate(0, ${wScroll / 0}%)`,
+                        //     "transition": `0.80s ease`,
+                        //     // "margin-top": `200px`
+                        // });
 
                         getHabit1.classList.add("habit1");
                         getHabit2.classList.add("habit2");
@@ -465,7 +465,7 @@ const sertifikat = ()=>{
 
     $(window).scroll(function(){
         const wScroll = $(this).scrollTop();
-        console.log(wScroll);
+        // console.log(wScroll);
 
         if(wScroll >= $(parentSertifikat).offset().top - 450){
             photoSer.classList.add("photoCertification");
@@ -989,8 +989,8 @@ function responsive(){
                                 getAllOrder[1].classList.remove("fadeOrder");
                                 getAllOrder[2].classList.remove("fadeOrder");
                                 getAllOrder[3].classList.remove("fadeOrder");
-
-
+                                
+                                
                                 getBurger.classList.remove("first");
                                 getBurger.classList.remove("second");
                                 getBurger.classList.remove("thirth")
@@ -1007,7 +1007,23 @@ function responsive(){
             }, 900)
             
         });
-    
+
+        const absord = document.querySelector(".pasif .absord");
+        $(window).scroll(function(){
+            const wScroll = $(this).scrollTop();
+
+            // console.log(wScroll);
+
+            // absord.style.transform = `translate(0, ${wScroll / 1000}%)`;
+            $(absord).css({
+                // "transform": `translate(0, ${wScroll * 0}%)`
+               
+            })
+
+        })
+
+        
+
     // Tablet
     }else if(window.matchMedia("(max-width: 764px)").matches){
         const getOrder = document.querySelector(".order-list");

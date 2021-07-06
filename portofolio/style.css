@@ -512,6 +512,10 @@ body .back-img{
     opacity: 0.5;
 }
 
+.pasif .absord{
+    margin-bottom: 300px;
+}
+
 .pasif .absord .skill{
     display: grid;
     justify-content: center;
@@ -532,10 +536,11 @@ body .back-img{
     background-color: rgb(34, 33, 33);
     border: 2px solid white;
     border-radius: 5px;
-    width: 96%;
+    width: 95%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* align-items: center; */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* grid-template-columns: repeat(2, 1fr); */
+
     padding: 10px;
     box-sizing: border-box;
     transform: translateX(-1400px);
@@ -1131,6 +1136,11 @@ footer{
     padding: 20px;
     box-sizing: border-box;
     color: white;
+    column-gap: 20px;
+}
+
+.place .box-long p{
+    text-align: center;
 }
 
 .box-long .brand-design .brand-design-pola{
@@ -1153,9 +1163,8 @@ footer{
     margin-top: 20px;
 }
 
-.brand-design .text-brand .title-brand, p{
-    text-align: start;
-    /* padding: 10px; */
+.brand-design .text-brand .title-brand h3{
+    text-align: center;
 }
 
 .brand-design .text-brand .title-brand{
@@ -2736,7 +2745,7 @@ footer .foot .place-down{
     .about-me .ganteng{
         grid-area: photo1;
         max-width: 80%;
-        height: 50%;
+        height: 70%;
         background-size: cover;
         background-position: center;
     }
@@ -2769,7 +2778,7 @@ footer .foot .place-down{
 
     .my-project{
         grid-area: photo3;
-        width: 65%;
+        width: 45%;
         height: 80%;
         display: grid;
         grid-template-rows: 0.95fr;
@@ -3331,8 +3340,12 @@ footer .foot .place-down{
 
     /* Photo1 */
 
+
+
     .about-me .ganteng{
-        max-width: 75%;
+        max-width: 70%;
+        height: 45%;
+        margin-right: -15px;
     }
 
     /* Photo1 End*/
@@ -3517,6 +3530,15 @@ footer .foot .place-down{
         right: 0;
     }
 
+    /* hero photo */
+
+    .header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr;
+    }
+
+    /* hero photo End*/
+
     /* sizing Parent */
 
     
@@ -3565,6 +3587,10 @@ footer .foot .place-down{
 
     /* About */
 
+    .about-me .ganteng{
+        width: 100%;
+        height: 50%;
+    }
 
     .about-me .text-me .tentang-saya{
         font-size: 1.6em;
@@ -3576,6 +3602,7 @@ footer .foot .place-down{
 
     .my-project{
         margin-top: 250px;
+        width: 70%;
     }
 
 
@@ -3630,30 +3657,41 @@ footer .foot .place-down{
         font-size: 0.88em;
     }
 
+    .keahlian .passion .textPassion h2{
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
     .keahlian .passion .lin{
         font-size: 0.90em;
     }
 
     .passion-text{
         display: grid;
-        justify-content: center;
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        row-gap: 25px;
     }
     
 
     .passion-text h1{
         font-size: 1.55em;
+        margin: 50px;
     }
 
     .passion-text .box-col{
         width: 100%;
         /* padding-top: 20px; */
-        margin-top: -30px;
+        margin-top: -50px;
     }
 
     .passion-text .box-col .square-box{
-        width: 95%;
-        height: 30%;
+        width: 90%;
+        height: 31%;
+        display: flex;
+        justify-content: space-around;
     }
+
 
     .passion-text .box-col .square-box img{
         width: 80px;
@@ -4036,7 +4074,7 @@ footer .foot .place-down{
     }
 
     .photo-parent button{
-        position: absolute;
+        /* position: absolute; */
         width: 30px;
         height: 30px;
         cursor: pointer;
@@ -4046,15 +4084,14 @@ footer .foot .place-down{
         left: 70px;
     }
 
-    .photo-parent #previous{
-        right: 70px;
-    }
+
 
 
 
     .container-slide .photo-parent{
-        width: 180px;
+        width: 220px;
         height: 100%;
+        border: 4px solid yellow;
     }
 
     .container-slide .my-text-sertifikat{
@@ -4074,6 +4111,10 @@ footer .foot .place-down{
     /* footer */
 
     footer .foot .place-down{
+        padding: 30px;
+    }
+
+    footer .foot .place-down{
         font-size: 0.97rem;
     }
 
@@ -4090,6 +4131,7 @@ footer .foot .place-down{
 
     .foot .place-down .kaki-place-2 .place-tex2{
         font-size: 0.86rem;
+        column-gap: 45px;
     }
 
 
